@@ -1,0 +1,84 @@
+/* Existing styles remain the same */
+
+/* Media query for screens smaller than 768px (typical for mobile devices) */
+@media (max-width: 768px) {
+  main {
+    margin: 10px; /* Adjust margins for smaller screens */
+  }
+
+  .episode {
+    width: 100%; /* Full width for smaller screens */
+  }
+}
+
+* {
+  box-sizing: border-box;
+  
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+header {
+  background-color: #542f78;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 10px;
+
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.episode {
+  background-color: #eee;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  padding: 20px;
+  width: calc(30% - 20px); /* Adjusted width to include margin */
+  box-sizing: border-box; /* Ensure the box model includes padding and borders in the width calculation */
+
+}
+
+.episode h2 {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.episode img {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%; /* Make the image fill its container */
+  height: auto;
+  border-radius: 5px; /* Optional: Add rounded corners to the images */
+}
+
+p {
+  white-space: pre-line;
+}

@@ -1,0 +1,110 @@
+/* Add your styles here */
+
+@media only screen and (max-width: 600px) {}
+
+.webcomic-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+}
+
+.chapter {
+    width: 100%;
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto; /* Center the chapter horizontally */
+    overflow-x: hidden;
+}
+
+.chapter img {
+    width: 100%; /* Use 100% to make images fill the container */
+    height: auto;
+}
+
+.navigation-controls,
+.navigation-controls-top {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    margin: 10p; 
+}
+
+.previous,
+.home,
+.next {
+    background-color: blueviolet;
+    color: aliceblue;
+    border: none;
+    border-radius: 7px;
+    height: 30px;
+    width: 80px;
+    cursor: pointer;
+    margin-inline: 6px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.previous:hover,
+.next:hover,
+.home:hover {
+    opacity: 0.8; /* Slightly increase opacity on hover */
+}
+
+.previous:active,
+.next:active {
+    background-color: rgb(161, 122, 198);
+}
+
+.home:active {
+    background-color: aquamarine;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.chapterList {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    height: 30px;
+    width: auto;
+    cursor: pointer;
+    margin-inline: 6px;
+    margin-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.chapterList:hover {
+    opacity: 0.8;
+}
+
+.chapterList:active {
+    background-color: #2980b9;
+}
+
+#chapterListContainer {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    z-index: 1; /* Ensure it's on top of other elements */
+}
+
+
+#chapterListContainer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#chapterListContainer li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+#chapterListContainer li:hover {
+    background-color: #f5f5f5;
+}
