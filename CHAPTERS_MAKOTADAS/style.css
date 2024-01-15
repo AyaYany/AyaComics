@@ -1,7 +1,5 @@
 /* Add your styles here */
 
-@media only screen and (max-width: 600px) {}
-
 .webcomic-page {
     display: flex;
     flex-direction: column;
