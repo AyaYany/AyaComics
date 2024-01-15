@@ -1,4 +1,17 @@
 @media only screen and (max-width: 600px) {
+    #webtoon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.chapter-image {
+    width: 100%; /* Adjust as needed */
+    max-width: 400px; /* Adjust as needed */
+    margin-bottom: 20px;
+  }
+
 .webcomic-page {
     display: flex;
     flex-direction: column;
