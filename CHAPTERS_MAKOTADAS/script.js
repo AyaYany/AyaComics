@@ -1,51 +1,60 @@
-// Function to show/hide the chapter list
-function showchapterList() {
-    const chapterListContainer = document.getElementById("chapterListContainer");
-    chapterListContainer.style.display = chapterListContainer.style.display === "none" ? "block" : "none";
+// Function to fetch images from a Google Drive folder
+async function fetchImagesFromDrive(folderId) {
+  const driveAPIUrl = `https://www.googleapis.com/drive/v3/files/${folderId}/children`;
+  const response = await fetch(driveAPIUrl);
+  const data = await response.json();
+
+  // Extract image file IDs
+  const imageFileIds = data.files.map(item => item.id);
+
+  // Convert image file IDs to direct image links
+  const imageLinks = imageFileIds.map(fileId => `https://drive.google.com/uc?id=${fileId}`);
+
+  return imageLinks;
 }
 
-// Function to redirect to a specific chapter
-function redirectToChapter(chapterId) {
-    // Replace this with the actual URLs of your chapters
-    const chapterUrls = {
-        chapter1: "Makotadas_Ch_1.html",
-        chapter2: "Makotadas_Ch_2.html",
-        chapter3: "Makotadas_Ch_3.html",
-    };
+// Function to load content for a specific chapter
+async function loadChapter(chapterNumber) {
+  // Ensure the chapter number is within valid bounds
+  if (chapterNumber < 1 || chapterNumber > totalChapters) {
+      alert("Invalid chapter number!");
+      return;
+  }
 
-    if (chapterId in chapterUrls) {
-        const chapterUrl = chapterUrls[chapterId];
-        
-        // Construct the complete URL or add additional logic if needed
-        const completeUrl = `${window.location.origin}/${chapterUrl}`;
+  // Update the current chapter
+  currentChapter = chapterNumber;
 
-        // Redirect to the chapter URL
-        window.location.href = completeUrl;
-    } else {
-        console.error(`Chapter with ID '${chapterId}' not found.`);
-    }
-}
+  // Get the folder ID for the current chapter
+  const chapterFolderId = chapterInfo[currentChapter - 1].folderId;
 
-const webtoonContainer = document.getElementById('webtoon-container');
+  // Fetch the images for the current chapter
+  const chapterImages = await fetchImagesFromDrive(chapterFolderId);
 
-// Replace 'YOUR_GOOGLE_DRIVE_IMAGE_URL' with the actual image URL from Google Drive
-const chapterImages = [
-  'https://drive.google.com/file/d/1OmDjJqyRM8t_98mGXdyzxP39jwr7wFlj/view?usp=drive_link',
-  'https://drive.google.com/file/d/18IeMa4vxBUtbjEQyobMY8noK5v_EZsho/view?usp=drive_link',
-  
-  // Add more image URLs as needed
-];
+  // Update the content of the webtoonContainer div
+  const webtoonContainer = document.getElementById('webtoon-container');
+  webtoonContainer.innerHTML = ""; // Clear existing content
 
-function loadChapterImages() {
-  chapterImages.forEach((imageUrl, index) => {
-    const imgElement = document.createElement('img');
-    imgElement.src = imageUrl;
-    imgElement.alt = `Chapter ${index + 1}`;
-    imgElement.className = 'chapter-image';
-    webtoonContainer.appendChild(imgElement);
+  // Create img elements for each image link
+  chapterImages.forEach((imageLink, index) => {
+      const imgElement = document.createElement('img');
+      imgElement.src = imageLink;
+      imgElement.alt = `Chapter ${currentChapter} - Page ${index + 1}`;
+      imgElement.className = 'chapter-image';
+      webtoonContainer.appendChild(imgElement);
   });
 }
 
-// Load the chapter images when the page is loaded
-window.addEventListener('load', loadChapterImages);
+// Array to hold information about each chapter
+const chapterInfo = [
+  { folderId: '1ThPIkOolGyqQ4VDI4sX57iDVKQnVFZ33' },
+  { folderId: '1oQfjswzlxH8--tuja8Zp40oh1wPkVmc0' },
+  // Add more chapters as needed
+];
 
+// Total number of chapters
+const totalChapters = chapterInfo.length;
+
+// Initialize the current chapter to 1
+let currentChapter = 1;
+
+// ... (rest of your script)

@@ -1,49 +1,47 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chap 1</title>
+    <title>Webcomic Viewer</title>
     <link rel="stylesheet" href="style.css">
-        
 </head>
 
 <body>
-      <!-- Navigation Controls top -->
+    <!-- Navigation Controls top -->
     <div class="navigation-controls-top">
-    <button class="previous">PREVIOUS</button>
-    <button class="home">HOME</button>
-    <button class="next">NEXT</button>
-   </div>
-    
-  <div id="webtoon-container"></div>
-
-  <script src="script.js"></script>
-
-        <!-- Navigation Controls -->
-        <div class="navigation-controls">
-        <button class="previous">PREVIOUS</button>
-        <button class="home">HOME</button>
-        <button class="next">NEXT</button>
+        <button class="previous" onclick="loadChapter(currentChapter - 1)">PREVIOUS</button>
+        <button class="home" onclick="loadChapter(0)">HOME</button>
+        <button class="next" onclick="loadChapter(currentChapter + 1)">NEXT</button>
     </div>
 
+    <!-- Webcomic Content -->
+    <div id="webtoon-container"></div>
     
+
+    <!-- Navigation Controls -->
+    <div class="navigation-controls">
+        <button class="previous" onclick="loadChapter(currentChapter - 1)">PREVIOUS</button>
+        <button class="home" onclick="loadChapter(0)">HOME</button>
+        <button class="next" onclick="loadChapter(currentChapter + 1)">NEXT</button>
+    </div>
+
+    <!-- Add the new button for chapter navigation -->
+    <button class="chapterList" onclick="showChapterList()">SELECT CHAPTERS</button>
+
+    <!-- Your content -->
+    <div id="chapterListContainer" class="hidden">
+        <ul>
+            <!-- The list of chapters -->
+            <li onclick="loadChapter(1)">Chapter 1</li>
+            <li onclick="loadChapter(2)">Chapter 2</li>
+            <li onclick="loadChapter(3)">Chapter 3</li>
+            <!-- Add more chapters as needed -->
+        </ul>
+    </div>
+
 </body>
-<!-- Add the new button for chapter navigation -->
-<button class="chapterList" onclick="showchapterList()">SELECT CHAPTERS</button>
 
-
-<!-- Your content -->
-<div id="chapterListContainer" class="hidden">
-    <ul>
-        <!-- The list of chapters -->
-        <li onclick="redirectToChapter('chapter1')">Chapter 1</li>
-        <li onclick="redirectToChapter('chapter2')">Chapter 2</li>
-        <li onclick="redirectToChapter('chapter3')">Chapter 3</li>
-    </ul>
-</div>
-
-<script src="script.js"></script>
 </html>
-

@@ -1,5 +1,8 @@
-@media only screen and (max-width: 600px) {
-    #webtoon-container {
+/* Add your styles here */
+
+@media only screen and (max-width: 600px) {}
+
+#webtoon-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -117,5 +120,4 @@
 
 #chapterListContainer li:hover {
     background-color: #f5f5f5;
-}
 }
