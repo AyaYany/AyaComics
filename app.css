@@ -3,7 +3,8 @@
 /* Media query for screens smaller than 768px (typical for mobile devices) */
 @media (max-width: 768px) {
   main {
-    margin: 10px; /* Adjust margins for smaller screens */
+    margin: 10px;
+    flex-direction: column; 
   }
 
   .episode {
@@ -16,23 +17,32 @@
   
 }
 
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  
+}
+
 body {
   font-family: sans-serif;
   margin: 0;
 }
 
 header {
+  display: flex;
   background-color: #542f78;
   color: #fff;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+  flex-direction: column;
   padding: 10px;
 
 }
 
 nav ul {
   display: flex;
+  align-self: center;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -52,18 +62,20 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 20px;
+  margin: 10px;
 }
 
 .episode {
   background-color: #eee;
   border-radius: 5px;
+  padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   margin-bottom: 20px;
-  padding: 20px;
-  width: calc(30% - 20px); /* Adjusted width to include margin */
-  box-sizing: border-box; /* Ensure the box model includes padding and borders in the width calculation */
-
+  flex-wrap: wrap;
+  /*  
+  width: calc(30% - 20px); */ /* Adjusted width to include margin */
+  box-sizing: border-box;  
+  
 }
 
 .episode h2 {
@@ -74,9 +86,9 @@ main {
 .episode img {
   display: block;
   margin-bottom: 10px;
-  width: 100%; /* Make the image fill its container */
+  width: 100%;    /* Make the image fill its container */
   height: auto;
-  border-radius: 5px; /* Optional: Add rounded corners to the images */
+  border-radius: 5px; 
 }
 
 p {
