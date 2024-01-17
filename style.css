@@ -1,0 +1,100 @@
+/* Add your styles here */
+
+/*.chapter-image {
+    width: 100%; 
+    max-width: 400px; 
+    margin-bottom: 20px;
+  }*/
+
+body {
+    margin: 0px;
+}
+
+.webcomic-page {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.chapter {
+    width: 100%;
+    max-width: 550px; /* Adjust as needed */
+    margin: 0 auto; /* Center the chapter horizontally */
+    overflow-x: hidden;
+    
+}
+
+.chapter img {
+    width: 100%; /* Use 100% to make images fill the container */
+    height: auto;
+}
+
+.navigation-controls,
+.navigation-controls-top {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    margin-top: 10px;
+    margin-bottom: 0px;
+
+}
+
+.previous,
+.home,
+.next {
+    background-color: blueviolet;
+    color: aliceblue;
+    border: none;
+    border-radius: 7px;
+    height: 30px;
+    width: 80px;
+    cursor: pointer;
+    margin-inline: 6px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.previous:hover,
+.next:hover,
+.home:hover {
+    opacity: 0.8; /* Slightly increase opacity on hover */
+}
+
+.previous:active,
+.next:active {
+    background-color: rgb(161, 122, 198);
+}
+
+.home:active {
+    background-color: aquamarine;
+}
+
+
+.chapter_menu,
+.chapter_menu2 {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    height: 30px;
+    width: auto;
+    cursor: pointer;
+    margin-inline: 6px;
+    margin-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.chapter_menu:hover,
+.chapter_menu2:hover {
+    opacity: 0.8;
+}
+
+.chapter_menu:active,
+.chapter_menu2:active {
+    background-color: #2980b9;
+}
+
+.chapter_menu2 {
+    margin-bottom: 10px;
+    margin-top: 0px;
+}

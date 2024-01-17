@@ -1,17 +1,3 @@
-/* Existing styles remain the same */
-
-/* Media query for screens smaller than 768px (typical for mobile devices) */
-@media (max-width: 768px) {
-  main {
-    margin: 10px;
-    flex-direction: column; 
-  }
-
-  .episode {
-    width: 100%; /* Full width for smaller screens */
-  }
-}
-
 * {
   box-sizing: border-box;
   
@@ -28,6 +14,8 @@ div {
 body {
   font-family: sans-serif;
   margin: 0;
+  flex-wrap: wrap;
+  align-content: flex-start;
 }
 
 header {
@@ -61,26 +49,27 @@ nav a {
 main {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  /*justify-content: space-around;*/
   margin: 10px;
+  gap: 10px;
 }
 
 .episode {
   background-color: #eee;
   border-radius: 5px;
   padding: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
   margin-bottom: 20px;
-  flex-wrap: wrap;
-  /*  
-  width: calc(30% - 20px); */ /* Adjusted width to include margin */
+  flex-basis: 100px;
+  flex-grow: 1;
   box-sizing: border-box;  
   
 }
 
 .episode h2 {
-  font-size: 20px;
+  font-size: 25px;
   margin-top: 0;
+  
 }
 
 .episode img {
@@ -90,7 +79,8 @@ main {
   height: auto;
   border-radius: 5px; 
 }
-
+ 
 p {
+  font-size: 20px;
   white-space: pre-line;
 }
