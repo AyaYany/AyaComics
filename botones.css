@@ -1,0 +1,32 @@
+body {
+  margin: 0px;
+  background-color: #aa90c4;
+}
+
+h1 {
+  display: flex;
+  background-color: #542f78;
+  font-family: 'belanosima';
+  color: #fff;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+  margin: 0px;
+}
+
+.subh1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+
+.chapters-container {
+  display: grid;
+  margin: 20px;
+  padding: 10px;
+}
+
+li {
+ padding: 5px;
+ border-color: #542f78;
+}
+
