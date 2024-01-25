@@ -1,32 +1,32 @@
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0px;
-  background-color: black;
+    margin: 0px;
+    background-color: black;
 }
 
 .webcomic-page {
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    align-items: center;
 }
 
-
-.chapter img {
-  width: 100%; /* Use 100% to make images fill the container */
-  height: auto;
-
+.chapter-image {
+    width: 100%;
+    max-width: 550px; 
+    margin: 0px;
+    overflow-x: hidden;
+}
+.chapter-image img {
+    width: 100%; 
+    height: auto;
 }
 
 .navigation-controls,
 .navigation-controls-top {
   display: flex;
-  justify-content: center; /* Center the buttons horizontally */
+  justify-content: center; 
   margin-top: 10px;
   margin-bottom: 0px;
-
 }
 
 .previous,
@@ -46,7 +46,7 @@ body {
 .previous:hover,
 .next:hover,
 .home:hover {
-  opacity: 0.8; /* Slightly increase opacity on hover */
+  opacity: 0.8; 
 }
 
 .previous:active,
@@ -58,7 +58,6 @@ body {
 .home:active {
   background-color: aquamarine;
 }
-
 
 .chapter_menu,
 .chapter_menu2 {
@@ -72,7 +71,6 @@ body {
   margin-inline: 6px;
   margin-top: 10px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
 }
 
 .chapter_menu:hover,
@@ -90,15 +88,8 @@ body {
   margin-top: 0px;
 }
 
-.chapter-image {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-.chapter-image img {
-  width: 500px;
-}
+
 /*.chapter-image {
   display: flex;
   width: 600px;

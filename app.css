@@ -116,23 +116,34 @@ p a {
 }
 
 
-@media only screen and (300px <= width <= 390px) or (orientation:vertical) {
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  
+  }
+
+  header {
+    display: flex;
+    flex: 1;
+    padding: 10px;
+    padding-bottom: 0px;
+  }
   header a img {
     width: 80px;
     height: 80px;
   }
 
   h1 {
-    font-size: 30px;
+    font-size: 35px;
   }
 
   nav ul {
+    font-size: 12px;
     display: flex;
-    flex-direction: row; /* Cambiado a columna para una mejor disposición en pantallas pequeñas */
-    align-items: center; /* Alineados al centro verticalmente */
+    flex-direction: row;
+    align-items: center; 
     margin: 0;
-    padding-bottom: 5px;
-    padding-left: 0px;
+    padding: 5px;
     list-style: none;
   }
   
@@ -148,44 +159,48 @@ p a {
     flex-direction: row;
     max-width: 100%;
     max-height: 300px;
-    margin: 20px;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    padding-bottom: 20px;
+    margin: 5px;
+    padding: 10px;
+    padding-bottom: 0px;
   }
-
 
   .episode img {
-    max-height: 260px;
+    max-height: 200px;
     width: auto;
-    margin-right: 20px;
-    margin-bottom: 0px;
-    
+    margin-right: 10px;
   }
   .episode a {
+    font-size: 14px;
     padding: 0px;
     margin-bottom: 0px;
   }
 
   .episode h2 {
     font-size: 20px;
-   
+    margin-bottom: 10px;
   }
 
  .episode p {
-    font-size: 17px;
+    font-size: 12px;
     margin: 0px;
     padding: 0px;
     line-height: 1.0;
   }
 
 .episode p a {
-  line-height: 0.1;
+  line-height: 0.0.5;
   margin-top: 0px;
+  padding: 0px;
 }
 
-  .letras {
-    flex-direction: column;
-    margin: 0px;
-  }
+.letras {
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+  max-height: 200px;
+}
+
+.footer {
+  margin-left:10px;
+}
 }

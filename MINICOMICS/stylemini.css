@@ -1,5 +1,6 @@
 body {
     background-color: black;
+    margin: 0px;
 }
 .minibox {
       display: flex;  
@@ -64,12 +65,7 @@ body {
       align-items: center;
     }
   
-    .chapter-image {
-      width: 100%;
-      max-width: 550px;
-      margin: 0 auto; 
-      
-    }
+    
   
     .chapter-image img {
       width: 100%; 
@@ -92,7 +88,7 @@ body {
           letter-spacing: 2px;
           border: 10px;
           width: 100%;
-          box-sizing: border-box;
+          
       }
   
       .minibox p {

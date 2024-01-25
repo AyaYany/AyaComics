@@ -20,21 +20,20 @@ body {
 
 .chapter {
     width: 100%;
-    max-width: 550px; /* Adjust as needed */
-    margin: 0 auto; /* Center the chapter horizontally */
+    max-width: 550px; 
+    margin: 0 auto;
     overflow-x: hidden;
-    
 }
 
 .chapter img {
-    width: 100%; /* Use 100% to make images fill the container */
+    width: 100%; 
     height: auto;
 }
 
 .navigation-controls,
 .navigation-controls-top {
     display: flex;
-    justify-content: center; /* Center the buttons horizontally */
+    justify-content: center; 
     margin-top: 10px;
     margin-bottom: 0px;
 
@@ -57,7 +56,7 @@ body {
 .previous:hover,
 .next:hover,
 .home:hover {
-    opacity: 0.8; /* Slightly increase opacity on hover */
+    opacity: 0.8;
 }
 
 .previous:active,
