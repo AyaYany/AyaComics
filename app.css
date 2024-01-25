@@ -116,7 +116,7 @@ p a {
 }
 
 
-@media only screen and (max-width: 900px) {
+@media only screen and (300px <= width <= 600px) {
   header a img {
     width: 80px;
     height: 80px;
