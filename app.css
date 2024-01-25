@@ -78,15 +78,15 @@ main {
 }
 
 .episode {
-  display: flex;  /* Hace que el contenedor sea flexible */
-  flex-direction: column;  /* Organiza los elementos hijos en una columna */
+  display: flex;  
+  flex-direction: column; 
   background-color: #996b6e;
   border-radius: 5px;
   padding: 20px;
   padding-bottom: 10px;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
   margin-bottom: 20px;
-  max-width: 200px;  /* Establece un ancho máximo para evitar que el contenedor se vuelva demasiado ancho */
+  max-width: 200px;  
 }
 
 .episode h2 {
@@ -95,7 +95,7 @@ main {
 }
 
 .episode img {
-  flex: 1;  /* Permite que la imagen se expanda para llenar el espacio disponible */
+  flex: 1;  
   display: block;
   margin-bottom: 10px;
   width: 100%;
@@ -113,4 +113,79 @@ p {
 p a {
   text-decoration: none;
   color: #56070C;
+}
+
+
+@media only screen and (max-width: 600px) {
+  header a img {
+    width: 80px;
+    height: 80px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row; /* Cambiado a columna para una mejor disposición en pantallas pequeñas */
+    align-items: center; /* Alineados al centro verticalmente */
+    margin: 0;
+    padding-bottom: 5px;
+    padding-left: 0px;
+    list-style: none;
+  }
+  
+  nav li {
+    margin: 0 5px;
+  }
+
+  main {
+    margin: 5px;
+  }
+
+  .episode {
+    flex-direction: row;
+    max-width: 100%;
+    max-height: 300px;
+    margin: 20px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 20px;
+  }
+
+
+  .episode img {
+    max-height: 260px;
+    width: auto;
+    margin-right: 20px;
+    margin-bottom: 0px;
+    
+  }
+  .episode a {
+    padding: 0px;
+    margin-bottom: 0px;
+  }
+
+  .episode h2 {
+    font-size: 20px;
+   
+  }
+
+ .episode p {
+    font-size: 17px;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1.0;
+  }
+
+.episode p a {
+  line-height: 0.1;
+  margin-top: 0px;
+}
+
+  .letras {
+    flex-direction: column;
+    margin: 0px;
+  }
 }

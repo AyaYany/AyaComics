@@ -1,182 +1,103 @@
-
-
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0px;
+body {
     background-color: black;
 }
-
-.webcomic-page {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    align-items: center;
-}
-
-
-.chapter img {
-    width: 100%; /* Use 100% to make images fill the container */
-    height: auto;
-
-}
-
-.navigation-controls,
-.navigation-controls-top {
-    display: flex;
-    justify-content: center; /* Center the buttons horizontally */
-    margin-top: 10px;
-    margin-bottom: 0px;
-
-}
-
-.previous,
-.home,
-.next {
-    background-color: rgb(0, 0, 0);
-    border: 2px solid #ff0000;
-    color: red;
-    border-radius: 7px;
-    height: 30px;
-    width: 80px;
-    cursor: pointer;
-    margin-inline: 6px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.previous:hover,
-.next:hover,
-.home:hover {
-    opacity: 0.8; /* Slightly increase opacity on hover */
-}
-
-.previous:active,
-.next:active {
-    background-color: rgb(0, 0, 0);
-    
-}
-
-.home:active {
-    background-color: aquamarine;
-}
-
-
-.chapter_menu,
-.chapter_menu2 {
-    background-color: #ff0000;
-    color: white;
-    border: none;
-    border-radius: 7px;
-    height: 30px;
-    width: auto;
-    cursor: pointer;
-    margin-inline: 6px;
-    margin-top: 10px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
-}
-
-.chapter_menu:hover,
-.chapter_menu2:hover {
-    opacity: 0.8;
-}
-
-.chapter_menu:active,
-.chapter_menu2:active {
-    background-color: #000000;
-}
-
-.chapter_menu2 {
-    margin-bottom: 10px;
-    margin-top: 0px;
-}
-
-.chapter-image {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.chapter-image img {
-    width: 500px;
-}
-/*.chapter-image {
-    display: flex;
-    width: 600px;
-    height: 430px;
-    overflow-x: auto; 
-    overflow-y: hidden;
-    white-space: nowrap;
-}
-
-.chapter-image img {
-    width: 0px;
-    flex-grow: 1;
-    object-fit: cover;
-    opacity: .8;
-    transition: .5s ease;
-}
-
-.chapter-image img:hover {
-    cursor:crosshair;
-    width: 300px;
-    opacity: 1;
-    filter: contrast(120%);
-}
-
-.chapter-image img:active {
-    cursor: crosshair;
-    width: 300px;
-    opacity: 1;
-    filter: contrast(120%);
-}*/
-
 .minibox {
-    display: flex;  /* Hace que el contenedor sea flexible */
-    flex-direction: column;  /* Organiza los elementos hijos en una columna */
-    background-color: red;
-    border-radius: 5px;
-    padding: 5px;
-
-    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
-    margin: 10px;
-    max-width: 200px;  /* Establece un ancho máximo para evitar que el contenedor se vuelva demasiado ancho */
-  }
-  
-  .minibox h2 {
-    font-size: 25px;
-    margin: 0;
-    font-family: teko;
-    text-align: justify;
-    letter-spacing: 2px;
-    text-align: center;
-  }
-  
-  .minibox img {
-    flex: 1;  /* Permite que la imagen se expanda para llenar el espacio disponible */
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
-  
-  p {
-    text-align: center;
-    margin-top: 0px;
-    font-size: 17px;
-    white-space: pre-line;
-    margin-left: 0px;
-  }
-  
-  p a {
-    text-decoration: none;
-    color: #56070C;
-  }
-
-  .containerminis {
-    display: flex;
-    flex-direction: row;
-    margin: 20px;
+      display: flex;  
+      flex-direction: column; 
+      background-color: red;
+      border-radius: 5px;
+      padding: 5px;
+      box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+      margin: 10px;
+      max-width: 200px;
+    }
     
-  }
+    .minibox h2 {
+      font-size: 25px;
+      margin: 0;
+      font-family: teko;
+      text-align: justify;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+    
+    .minibox img {
+      flex: 1;
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      transition: filter 0.5s ease;
+    
+    }
+
+    .minibox img:hover {
+        filter: brightness(2.0) hue-rotate(15deg);
+        
+    }
+    
+    .minibox img:active {
+        filter: brightness(1.5) hue-rotate(0deg) saturate(200%) contrast(150%);
+    }
+    
+
+    p {
+      text-align: center;
+      margin-top: 0px;
+      font-size: 17px;
+      white-space: pre-line;
+      margin-left: 0px;
+    }
+    
+    p a {
+      text-decoration: none;
+      color: #56070C;
+    }
+  
+    .containerminis {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      max-width: 700px;
+      max-height: auto;
+      justify-content: center; 
+      align-items: center;
+    }
+  
+    .chapter-image {
+      width: 100%;
+      max-width: 550px;
+      margin: 0 auto; 
+      
+    }
+  
+    .chapter-image img {
+      width: 100%; 
+      height: auto;
+      
+    }
+  
+    
+  
+  @media only screen and (max-width: 600px) {
+      .containerminis {
+          flex-direction: column;
+      }
+  
+      .minibox {
+          max-width: 100%;
+      }
+      .minibox h2{
+          font-size: 30px;
+          letter-spacing: 2px;
+          border: 10px;
+          width: 100%;
+          box-sizing: border-box;
+      }
+  
+      .minibox p {
+          font-size: 16px;
+      }
+      }
+      
+      

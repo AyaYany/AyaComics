@@ -1,0 +1,131 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px;
+  background-color: black;
+}
+
+.webcomic-page {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  align-items: center;
+}
+
+
+.chapter img {
+  width: 100%; /* Use 100% to make images fill the container */
+  height: auto;
+
+}
+
+.navigation-controls,
+.navigation-controls-top {
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  margin-top: 10px;
+  margin-bottom: 0px;
+
+}
+
+.previous,
+.home,
+.next {
+  background-color: rgb(0, 0, 0);
+  border: 2px solid #ff0000;
+  color: red;
+  border-radius: 7px;
+  height: 30px;
+  width: 80px;
+  cursor: pointer;
+  margin-inline: 6px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.previous:hover,
+.next:hover,
+.home:hover {
+  opacity: 0.8; /* Slightly increase opacity on hover */
+}
+
+.previous:active,
+.next:active {
+  background-color: rgb(0, 0, 0);
+  
+}
+
+.home:active {
+  background-color: aquamarine;
+}
+
+
+.chapter_menu,
+.chapter_menu2 {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  height: 30px;
+  width: auto;
+  cursor: pointer;
+  margin-inline: 6px;
+  margin-top: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.chapter_menu:hover,
+.chapter_menu2:hover {
+  opacity: 0.8;
+}
+
+.chapter_menu:active,
+.chapter_menu2:active {
+  background-color: #000000;
+}
+
+.chapter_menu2 {
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+.chapter-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chapter-image img {
+  width: 500px;
+}
+/*.chapter-image {
+  display: flex;
+  width: 600px;
+  height: 430px;
+  overflow-x: auto; 
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.chapter-image img {
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: .8;
+  transition: .5s ease;
+}
+
+.chapter-image img:hover {
+  cursor:crosshair;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+.chapter-image img:active {
+  cursor: crosshair;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+}*/
