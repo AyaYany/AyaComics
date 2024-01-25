@@ -116,7 +116,7 @@ p a {
 }
 
 
-@media only screen and (300px <= width <= 600px) or (orientation: portrait) {
+@media only screen and (orientation: portrait) {
   header a img {
     width: 80px;
     height: 80px;
