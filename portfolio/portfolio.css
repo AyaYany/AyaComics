@@ -20,6 +20,7 @@ header {
 .logo {
 margin-bottom: 0px;
 }
+
 .logo img {
   max-width: 100px;
   height: auto;
@@ -28,6 +29,7 @@ margin-bottom: 0px;
 
 nav{
   margin-top: 0px;
+  padding-top: 0px;
  }
 
 nav button {
@@ -92,6 +94,53 @@ nav button {
 }
 
 .lightbox {
+  /* Existing styles for the lightbox container */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.lightbox img {
+  /* Existing styles for the image inside the lightbox */
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: auto;
+}
+
+.prev-btn,
+.next-btn {
+  
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px; 
+  height: 50px; 
+  cursor: pointer;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.close-btn, .prev-btn, .next-btn {
+  padding: 10px; 
+  box-sizing: content-box;
+}
+
+/*
+.lightbox {
   display: none;
   position: fixed;
   top: 0;
@@ -106,9 +155,9 @@ nav button {
   margin: auto;
   max-width: 90%;
   max-height: 90%;
-  /*margin-top: 5%;*/
+  /*margin-top: 5%;
 }
-
+*/
 .clients {
   display: flex;
   flex-wrap: wrap;
@@ -166,5 +215,12 @@ footer {
   }
   .gallery img:hover {
     transform: none; /* Anula la transformación de escala en hover */
+  }
+  .prev-btn {
+    left: 2px;
+  }
+  
+  .next-btn {
+    right: 2px;
   }
 }
