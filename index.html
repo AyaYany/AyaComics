@@ -8,9 +8,11 @@
   <link rel="stylesheet" type="text/css" href="app.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet">
+  
 </head>
 
-<body>
+<body class="en">
+  
   <header>
     <a><img src="IMAGES/logoongblanco.png"></a>
     <div class="derecha" >
@@ -19,95 +21,76 @@
       <ul>
         <li><a href="https://www.patreon.com/ayayany">PATREON</a></li>
         <li><a href="https://twitter.com/ayayanagisawa">X/TWITTER</a></li>
-        <li><a href="#">PORTFOLIO</a></li>
+        <li><a href="portfolio/Portfolio.html">PORTFOLIO</a></li>
         <li><a href="#">ABOUT US</a></li>
       </ul>
     </nav>
   </div>
   </header>
-  <main>
-    
 
-    <section class="episode">
-      <!-- <h2>Makotadas</h2> -->
+  <div id="lang" class="lang">
+    <button class="itemLang" data-lang="en">ENGLISH</button>
+    <button class="itemLang" data-lang="es">ESPAÑOL</button>
+  </div>
+  
+ <main>
+    <section class="episode" id="episode1">
       <a href="CHAPTER LIST.html">
         <img src="Makotadas_cover.jpg" alt="Episode 1 cover">
       </a>
-      <p>Un par de corazones rotos se encontrarán en una situación poco común.
-
-        Comedia/Romance/Ecchi
-        
-        <b>ESTADO:</b>
-        en emisión
-      
-        <a href="https://www.facebook.com/Makotadas"><b>FACEBOOK</b></a> 
-
-        <a href="https://akaya.io/serie/99"><b>AKAYA MEDIA</b></a>
-
-        <a href="https://akaya.io/serie/99"><b>FANARTS</b></a>
-        
-        <a href="https://akaya.io/serie/99"><b>GALERÍA DE IMÁGENES</b></a>
+      <div class="text-container">
+      <p data-section="episodes" data-value="parrafo1">Un par de corazones rotos se encontrarán en una situación poco común.<br>
+      Comedia/Romance/Ecchi<br><br>
+        <b>ESTADO:</b> en emisión
       </p>
+      <ul>
+        <li><a href="https://www.facebook.com/Makotadas"><b>FACEBOOK</b></a><br></li>
+        <li><a href="https://akaya.io/serie/99"><b>AKAYA</b></a><br></l</li>
+        <li><a href="https://akaya.io/serie/99"><b>FANARTS</b></a><br></li>
+        <li><a href="https://akaya.io/serie/99"><b>GALLERY</b></a></li>
+      </ul>
+    </div>
     </section>
 
-    <section class="episode">
-      <!-- <h2>We MUST protect The Noob</h2> -->
+    <section class="episode" id="episode2">
+
       <a href="https://www.webtoons.com/en/canvas/we-must-protect-the-noob/list?title_no=786372">
         <img src="Protect_the_noob.jpg" alt="Episode 2 cover">
       </a>
       <div class="letras">
-      <h2>We MUST protect
-        the NOOB
-      </h2>
-      <p>
-        No conviene enamorarse en un battle royale.
-        
-        Accion/RPG/romance/comedia/SFW
-
-        <b>ESTADO:</b>
-        Se empezará en cuanto termine Makotadas.
+      
+      <p data-section="episodes" data-value="parrafo2">
+        No conviene enamorarse en un battle royale.<br><br>Accion/RPG/romance/comedia/SFW<br><br><b>ESTADO:</b> Se empezará en cuanto termine Makotadas.
       </p>
     </div>
     </section>
 
-    <section class="episode">
+    <section class="episode" id="episode3">
       
       <a href="https://tapas.io/episode/1138924">
         <img src="Patricia&Juliet.jpg" alt="Episode 3 cover">
       </a>
       <div class="letras">
         <h2>Somebody to Love</h2>
-      <p>Una profesora sin ganas de vivir se topa con una alumna difícil de controlar.
-        
-        Hentai/Yuri
-
-        <b>ESTADO:</b>
-        Se avanza cuando makotadas esta en fase de pensar XD
+      <p data-section="episodes" data-value="parrafo3">Una profesora sin ganas de vivir se topa con una alumna difícil de controlar.<br><br>Hentai/Yuri<br><br><b>ESTADO:</b> Se avanza cuando makotadas esta en fase de pensar XD
       </p>
       </div>
-
     </section>
 
-    <section class="episode">
-      
+    <section class="episode" id="episode4">
       <a href="MINICOMICS/minis.html">
         <img src="https://live.staticflickr.com/65535/53474403993_df5dabc6ac_c_d.jpg" alt="Episode 1 cover">
       </a>
       <div class="letras">
-      <h2>MINI comics H +18 XXX</h2>
-      <p>Cortos hentai random
-        
-        <b>ESTADO:</b>
-        
-        Los hago cuando no hay nada definido para makotadas y somebody ._.
+      <h2>MINI comics<br>H +18 XXX</h2>
+      <p data-section="episodes" data-value="parrafo4">Cortos hentai random<br><br><b>ESTADO:</b> Los hago cuando no hay nada definido para makotadas y somebody ._.
       </p>
     </div>
     </section>
-
   </main>
-
   <footer>
     <p>Copyright © Makotadas 2024</p>
   </footer>
+  <script src="changeLanguage.js"></script>
 </body>
 </html>
