@@ -1,4 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Siempre carga Lightbox, independientemente del dispositivo
+  loadLightbox();
+});
+
+function isMobileDevice() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+
+/*document.addEventListener("DOMContentLoaded", function () {
   if (!isMobileDevice()) {
     // Only load Lightbox if not a mobile device
     loadLightbox();
@@ -7,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function isMobileDevice() {
   return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-}
+}*/
 
 function loadLightbox() {
   const images = document.querySelectorAll(".gallery img");
