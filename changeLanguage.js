@@ -16,7 +16,7 @@ const enData = {
       "parrafo2": "It is not advisable to fall in love in a battle royale.<br><br>Action/RPG/romance/comedy/SFW<br><br><b>STATUS:</b> It will start as soon as Makotadas finishes."
     },
     {
-      "parrafo3": "<p>A teacher with no desire to live runs into a student who is difficult to control.<br><br>Hentai/Yuri<br><br><b>STATUS:</b> Progress is made when makotadas is in the thinking phase XD"
+      "parrafo3": "<p>A teacher with no desire to live runs into a student who is difficult to control.<br><br>Hentai/Yuri<br><br><b>STATUS:</b> Need funds u_u"
     },
     {
       "parrafo4": "<p>Random hentai shorts<br><br><b>STATUS:</b> I make them when there is nothing defined for makotadas and somebody"
@@ -34,7 +34,7 @@ const esData = {
       "parrafo2": "No conviene enamorarse en un battle royale.<br><br>Accion/RPG/romance/comedia/SFW<br><br><b>ESTADO:</b> Se empezará en cuanto termine Makotadas."
     },
     {
-      "parrafo3": "<p>Una profesora sin ganas de vivir se topa con una alumna difícil de controlar.<br><br>Hentai/Yuri<br><br><b>ESTADO:</b> Se avanza cuando makotadas esta en fase de pensar XD"
+      "parrafo3": "<p>Una profesora sin ganas de vivir se topa con una alumna difícil de controlar.<br><br>Hentai/Yuri<br><br><b>ESTADO:</b> Necesita fondos u_u"
     },
     {
       "parrafo4": "<p>Cortos hentai random<br><br><b>ESTADO:</b> Los hago cuando no hay nada definido para makotadas y somebody"
