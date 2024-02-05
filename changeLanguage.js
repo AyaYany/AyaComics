@@ -16,7 +16,7 @@ const enData = {
       "parrafo2": "It is not advisable to fall in love in a battle royale.<br><br>Action/RPG/romance/comedy/SFW<br><br><b>STATUS:</b> It will start as soon as Makotadas finishes."
     },
     {
-      "parrafo3": "<p>A teacher with no desire to live runs into a student who is difficult to control.<br><br>Hentai/Yuri<br><br><b>STATUS:</b> Need funds u_u"
+      "parrafo3": "<p>A teacher with no desire to live runs into a student who is difficult to control.<br><br>Hentai/Yuri<br><br><b>STATUS:</b> Need Funds u_u"
     },
     {
       "parrafo4": "<p>Random hentai shorts<br><br><b>STATUS:</b> I make them when there is nothing defined for makotadas and somebody"
