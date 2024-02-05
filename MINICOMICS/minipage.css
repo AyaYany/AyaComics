@@ -1,6 +1,10 @@
 body {
-    margin: 0px;
-    background-color: black;
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  background-color: black;
+  align-items: center;
+  justify-content: center;
 }
 
 .webcomic-page {
@@ -8,17 +12,20 @@ body {
     flex-direction: column;
     margin-top: 10px;
     align-items: center;
+    justify-content: center;
 }
 
 .chapter-image {
-    width: 100%;
     max-width: 550px; 
-    margin: 0px;
     overflow-x: hidden;
+    align-items: center;
+    justify-content: center;
 }
 .chapter-image img {
     width: 100%; 
     height: auto;
+    justify-content: center;
+
 }
 
 .navigation-controls,

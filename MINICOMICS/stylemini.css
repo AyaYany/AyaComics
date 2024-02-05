@@ -1,6 +1,65 @@
 body {
     background-color: black;
     margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  background-color: #000000;
+ /* position: relative;*/
+  justify-content: center;
+}
+
+header a img {
+  width: 100px;
+  height: 100px;
+  margin: 0px;
+  /*position: absolute;*/ 
+  z-index: 2;
+}
+
+.derecha{
+  display: flex;
+  font-family: 'belanosima';
+  padding: 0px;
+  color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  /*list-style: none;*/
+  margin: 0;
+  padding-bottom: 5px;
+  padding-left: 0px;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.containerminis{
+  display: flex;
+
 }
 .minibox {
       display: flex;  
@@ -13,6 +72,11 @@ body {
       max-width: 200px;
     }
     
+.minibox a {
+      max-width: 200px;
+      max-height: auto;
+    }
+
     .minibox h2 {
       font-size: 25px;
       margin: 0;
@@ -32,6 +96,7 @@ body {
     
     }
 
+    
     .minibox img:hover {
         filter: brightness(2.0) hue-rotate(15deg);
         
@@ -94,6 +159,38 @@ body {
       .minibox p {
           font-size: 16px;
       }
+    
+        header {
+          display: flex;
+          flex: 1;
+          padding: 10px;
+          padding-bottom: 0px;
+        }
+      
+        header a img {
+          width: 80px;
+          height: 80px;
+        }
+      
+        h1 {
+          font-size: 35px;
+        }
+      
+        nav ul {
+          font-size: 12px;
+          display: flex;
+          flex-direction: row;
+          align-items: center; 
+          margin: 0;
+          padding: 5px;
+          list-style: none;
+        }
+        
+        nav li {
+          margin: 0 5px;
+        }
+      
+
       }
       
       
