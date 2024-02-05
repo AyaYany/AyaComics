@@ -1,59 +1,59 @@
-
-
 body {
   display: flex;
   flex-direction: column;
   font-family: sans-serif;
   margin: 0;
-  background-color: #56070C;
+  background-color: #670010;
 }
 
 header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background-color: #000000;
- /* position: relative;*/
   justify-content: center;
+  align-items: center;
+  
 }
 
 header a img {
+  display: block;
   width: 100px;
-  height: 100px;
+  height: auto;
   margin: 0px;
-  /*position: absolute;*/ 
-  z-index: 2;
 }
 
 .derecha{
   display: flex;
-  font-family: 'belanosima';
+  flex-direction: column;
   padding: 0px;
   color: #fff;
-  flex-direction: column;
   justify-content: center;
-  z-index: 1;
+  align-items: center;
+  /*z-index: 1;*/
 }
 
-h1 {
-  font-size: 40px;
+.derecha h1 {
+  font-family: 'Poiret One';
+  font-size: 50px;
   font-weight: bold;
-  margin: 10px;
+  margin: 0px;
+
 }
 
 nav ul {
+  font-family: 'helvetica';
   display: flex;
-  justify-content: center;
-  /*list-style: none;*/
-  margin: 0;
-  padding-bottom: 5px;
-  padding-left: 0px;
+  margin: 5px;
+  padding: 5px;
 }
 
-nav li {
-  margin: 0 10px;
+nav ul li {
+  margin-left: 0px;
+  margin-right: 20px;
+  font-size: 17px;
 }
 
-nav a {
+nav ul li a {
   color: #fff;
   text-decoration: none;
 }
@@ -61,7 +61,7 @@ nav a {
 main {
   display: flex;
   flex-direction: row;
-  margin: 10px;
+  margin: 0px;
   gap: 10px;
   flex-wrap: wrap;
   justify-content: center;
@@ -70,60 +70,78 @@ main {
 .lang {
   display: flex;
   justify-content: center;
+  margin: 0px;
+  
 }
 
 .itemLang {
-  font-family: 'Franklin Gothic Medium';
-  background-color: #ffffff;
+  font-weight: bold;
+  font-family: 'helvetica';
+  font-weight: bolder;
+  font-size: 17px;
+  color: #ffffff;
+  background-color:#000000;
   width: 200px;
-  height: 30px;
+  height: 25px;
   margin: 10px;
   border-radius: 10px;
+  border: none;
 }
 
 .itemLang:hover {
-  background-color: #ff0011;
+  background-color: #dcb9bb;
 }
 
 .itemLang:active {
-  background-color: #3e0000;
+  background-color:#ffffff;
+  color:#000000
 }
 
 .episode {
   display: flex;  
   flex-direction: column; 
-  background-color: #996b6e;
+  background-color: #c2908b;
   border-radius: 5px;
-  padding: 20px;
-  padding-bottom: 10px;
+  padding: 10px 0px 10px 0px;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
   margin-bottom: 20px;
-  max-width: 200px;  
+  max-width: 300px;  
 }
 
-.episode h2 {
+.letras h2 {
   font-size: 25px;
-  margin-top: 0;
+  margin: 0px 0px 10px 0px;
+  padding: 5px 0px 0px 20px;
 }
+
+.text-container {
+  padding: 0px 10px 10px 10px;
+}
+
+p {
+  font-size: 17px;
+  font-family: helvetica;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 20px 10px 20px; 
+}
+
+.makolinks {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 25px;
+}
+
 
 .episode img {
   flex: 1;  
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   width: 100%;
   height: auto;
-  border-radius: 5px;
 }
 
-p {
-  margin-top: 0px;
-  font-size: 17px;
-  margin-left: 0px;
-  margin-bottom: 0px;
-}
+
 
 .episode ul li a{
-
   text-decoration: none;
   color: #56070C;
 }
@@ -132,38 +150,67 @@ p {
 @media only screen and (max-width: 600px) {
   body {
     font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     justify-content: center;
   }
 
   header {
     display: flex;
-    flex: 1;
-    padding: 10px;
-    padding-bottom: 0px;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 10px;
+    padding-bottom:0px;
+    padding-right: 10px;
   }
 
   header a img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: auto;
+    margin: 0px 10px 0px 15px;
   }
+.derecha {
+  display: flex;
+  flex-direction: row;
+}
+.derecha h1 {
+  font-size: 50px;
+  padding-top: 10px;
+  margin: 0px;
+    
+  }
+.lang {
+  max-width: 350px;
+}
 
-  h1 {
-    font-size: 35px;
-  }
+.lang button {
+  margin-bottom: 5px;
+  font-size: 14px;
+  padding:3px;
+}
 
   nav ul {
     font-size: 12px;
     display: flex;
     flex-direction: row;
     align-items: center; 
+    justify-content: center;
+    flex-wrap: wrap;
     margin: 0;
     padding: 5px;
     list-style: none;
   }
   
-  nav li {
-    margin: 0 5px;
+  nav ul {
+    margin-top: 10px;
+    gap: 15px;
   }
 
+nav ul li {
+  padding: 0px;
+  margin: 0px;
+}
   main {
     margin: 5px;
   }
@@ -173,8 +220,7 @@ p {
     max-width: 100%;
     max-height: 300px;
     margin: 5px;
-    padding: 10px;
-    padding-bottom: 0px;
+    padding: 0px 0px 0px 10px;
   }
 
   .episode img {
@@ -182,39 +228,45 @@ p {
     width: auto;
     margin-right: 10px;
   }
-  .episode a {
-    font-size: 14px;
+  .episode a img{
     padding: 0px;
     margin-bottom: 0px;
   }
 
   .episode h2 {
     font-size: 20px;
-    margin-bottom: 10px;
+    padding: 10px 0px 0px 10px;
+    margin: 0px 0px 0px 0px;
   }
 
  .episode p {
     font-size: 14px;
-    margin-bottom: 0px;
-    padding: 0px;
-    
-  }
-
-.episode ul li a{
-
-    justify-content: left;
-    text-decoration: none;
-    color: #56070C;
     margin: 0px;
+    padding: 10px 10px 0px 5px;
   }
 
-  
+.text-container {
+padding: 10px 0px 0px 0px;
+}
+
+.makolinks{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-decoration: none;
+  color: #56070C;
+  list-style: none;    margin: 0px;
+  gap: 10px;
+  justify-content: left;
+  padding: 10px 0px 0px 10px;
+  }
+
 
 .letras {
   flex-direction: column;
   margin: 0px;
-  padding: 0px;
-  max-height: 200px;
+  padding: 0px 0px 0px 0px;
+  max-height: 180px;
 }
 
 .footer {
