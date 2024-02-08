@@ -1,0 +1,60 @@
+
+body {
+    font-family: 'Comfortaa', sans-serif;
+    background-color: #ff0000;
+    margin: 0;
+    padding: 0;
+}
+
+.about-me-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #000000;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: #ff0000;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.about-me-content {
+padding: 0px;
+}
+a img {
+   
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+}
+
+p {
+  margin: 30px;
+  color: #ffffff;
+  line-height: 1.6;
+  max-width: 600px;
+  text-align: justify;
+  text-justify: auto;
+}
+
+.contact-info {
+    margin-top: 20px;
+    
+}
+
+.contact-info a {
+    color: #ff0000;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+    
