@@ -19,16 +19,17 @@ header a img {
   display: block;
   width: 100px;
   height: auto;
-  margin: 0px;
+  margin: 15px 0px 0px 0px;
 }
 
 .derecha{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding: 0px;
   color: #fff;
   justify-content: center;
   align-items: center;
+  gap: 10px;
   /*z-index: 1;*/
 }
 
@@ -37,7 +38,7 @@ header a img {
   font-size: 50px;
   font-weight: bold;
   margin: 0px;
-
+  padding: 10px 0px 0px 0px;
 }
 
 nav ul {
@@ -100,18 +101,19 @@ main {
 .episode {
   display: flex;  
   flex-direction: column; 
-  background-color: #c2908b;
+  background-color: #dfd1d1;
   border-radius: 5px;
   padding: 10px 0px 10px 0px;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
   margin-bottom: 20px;
-  max-width: 300px;  
+  max-width: 250px;  
 }
 
 .letras h2 {
+  font-family: "Comfortaa";
   font-size: 25px;
-  margin: 0px 0px 10px 0px;
-  padding: 5px 0px 0px 20px;
+  text-align: center;
+  padding: 0px 10px 0px 10px;
 }
 
 .text-container {
@@ -121,74 +123,69 @@ main {
 p {
   font-size: 17px;
   font-family: helvetica;
-  margin: 0px 0px 0px 0px;
-  padding: 0px 20px 10px 20px; 
+  margin-top: 20px;
+  padding: 0px 20px 0px 20px; 
 }
 
 .makolinks {
   margin: 0px 0px 0px 0px;
-  padding: 0px 0px 0px 25px;
+  padding: 0px 0px 0px 35px;
 }
-
 
 .episode img {
   flex: 1;  
   display: block;
-  margin-bottom: 20px;
   width: 100%;
   height: auto;
 }
-
-
 
 .episode ul li a{
   text-decoration: none;
   color: #56070C;
 }
 
-
+footer{
+  color:#fff;
+  text-align: center;
+}
 @media only screen and (max-width: 600px) {
   body {
     font-size: 14px;
     display: flex;
     flex-direction: column;
     align-items: center;
-     justify-content: center;
+    justify-content: center;
   }
-
-  header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-left: 10px;
-    padding-bottom:0px;
-    padding-right: 10px;
-  }
-
+  
   header a img {
-    width: 100px;
+    width: 80px;
     height: auto;
-    margin: 0px 10px 0px 15px;
+    margin: 10px 0px 0px 60px; 
   }
-.derecha {
-  display: flex;
-  flex-direction: row;
-}
-.derecha h1 {
-  font-size: 50px;
-  padding-top: 10px;
-  margin: 0px;
-    
+  
+  .derecha {
+    display: flex;
+    margin: 5px 0px 10px 0px;
   }
-.lang {
-  max-width: 350px;
-}
 
-.lang button {
-  margin-bottom: 5px;
-  font-size: 14px;
-  padding:3px;
-}
+  .derecha h1 {
+    font-size: 40px;
+    padding: 0px;
+    margin: 10px 60px 0px 0px;
+    text-align: center;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .lang {
+    max-width: 350px;
+  }
+
+  .lang button {
+    margin-bottom: 5px;
+    font-size: 14px;
+    padding:3px;
+  }
 
   nav ul {
     font-size: 12px;
@@ -198,19 +195,16 @@ p {
     justify-content: center;
     flex-wrap: wrap;
     margin: 0;
-    padding: 5px;
+    padding: 10px;
     list-style: none;
-  }
-  
-  nav ul {
-    margin-top: 10px;
     gap: 15px;
   }
 
-nav ul li {
-  padding: 0px;
-  margin: 0px;
-}
+  nav ul li {
+    padding: 0px;
+    margin: 0px;
+  }
+
   main {
     margin: 5px;
   }
@@ -233,10 +227,11 @@ nav ul li {
     margin-bottom: 0px;
   }
 
-  .episode h2 {
+  .letras h2 {
     font-size: 20px;
-    padding: 10px 0px 0px 10px;
-    margin: 0px 0px 0px 0px;
+    text-align: left;
+    margin: 15px 10px 0px 5px;
+    padding: 0px;
   }
 
  .episode p {
@@ -245,31 +240,51 @@ nav ul li {
     padding: 10px 10px 0px 5px;
   }
 
-.text-container {
-padding: 10px 0px 0px 0px;
+  .letras p[data-section="episodes"][data-value="parrafo3"] {
+    margin: 0px 10px 10px 5px;
+    padding: 0px; 
 }
 
-.makolinks{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  text-decoration: none;
-  color: #56070C;
-  list-style: none;    margin: 0px;
-  gap: 10px;
-  justify-content: left;
-  padding: 10px 0px 0px 10px;
+.letras p[data-section="episodes"][data-value="parrafo2"] {
+  margin: 20px 10px 10px 5px;
+  padding: 0px 20px 0px 0px;
+}
+
+.letras p[data-section="episodes"][data-value="parrafo4"] {
+  margin: 20px 5px 10px 0px;
+  padding-right: 15px;
+  padding-top: 0px;
+  
+}
+
+.text-container {
+  margin: 5px 10px 10px 0px;
+  padding: 0px 10px 0px 0px;
+  text-justify:inter-word;
+}
+
+  .makolinks{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-decoration: none;
+    color: #56070C;
+    list-style: none;    margin: 0px;
+    gap: 10px;
+    justify-content: left;
+    padding: 10px 0px 0px 5px;
+  
+    }
+
+
+  .letras {
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px 0px 0px 0px;
+    max-height: 180px;
   }
 
-
-.letras {
-  flex-direction: column;
-  margin: 0px;
-  padding: 0px 0px 0px 0px;
-  max-height: 180px;
-}
-
-.footer {
-  margin-left:10px;
-}
+  .footer {
+    margin-left:10px;
+  }
 }
