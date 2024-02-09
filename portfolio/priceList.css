@@ -1,21 +1,24 @@
 body {
   background-color: #000000;
+  margin: 0px;
 }
 
 header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #ff0000;
+  background-color: #970000;
   color: #fff;
   text-align: center;
-  width: 100%;
   padding-bottom: 10px;
 }
-
+/*header h1 {
+  margin: 10px;
+  background-color: #000000;
+}*/
 
 .logo {
-  margin-bottom: 0px;
+  margin: 10px 0px 10px 0px;
 }
 
 .logo img {
@@ -23,7 +26,7 @@ header {
   height: auto;
 }
 
-nav{
+nav {
   margin: 0px;
   padding: 0px;
  }
@@ -38,12 +41,13 @@ nav button {
   border: none;
   background-color: #000000;
   border-radius: 10px;
-  padding: 5px;
   font-size: 20px;
-  font-family: Bebas neue;
-  text-decoration: none;  
+  font-family: "Bebas neue";
+  text-decoration: none;
+  padding: 0px 15px 0px 15px; 
+  gap: 5px;
+  margin: 2px;
 }
-
 .yesno {
   color: #fff;
   display: flex;
@@ -52,8 +56,12 @@ nav button {
   justify-content: center;
   text-align: center;
   font-family: Helvetica, sans-serif;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 20px 0px 20px;
   }
+
+.yesno h1 {
+margin: 0px
+}
 
 .importantdetails {
   color:#fff;
@@ -63,7 +71,7 @@ nav button {
   justify-content: center;
   text-align: center;
   font-family: Helvetica, sans-serif;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 20px 0px 20px;
   text-justify:distribute;
 }
 
@@ -71,9 +79,6 @@ nav button {
   transform: rotateY(180deg);
   transition: transform 0.5s;
 }
-
-
-
 
 .container {
   display: flex;
@@ -88,5 +93,41 @@ nav button {
 .container img{
   width: 300px;
   height: auto;
+}
+
+.clients {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.clients a {
+  margin: 5px;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #000000;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.text {
+  color: #000000;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+
+footer {
+  font-family: Helvetica, sans-serif;
+  background-color: #970000;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 

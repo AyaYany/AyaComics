@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
   background-color: #000000;
 }
 
@@ -8,7 +7,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #ff0000;
+  background-color: #970000;
   color: #fff;
   text-align: center;
   padding-bottom: 10px;
@@ -19,7 +18,7 @@ header {
 }*/
 
 .logo {
-  margin-bottom: 0px;
+  margin: 10px 0px 10px 0px;
 }
 
 .logo img {
@@ -27,7 +26,7 @@ header {
   height: auto;
 }
 
-nav{
+nav {
   margin: 0px;
   padding: 0px;
  }
@@ -42,10 +41,12 @@ nav button {
   border: none;
   background-color: #000000;
   border-radius: 10px;
-  padding: 5px;
   font-size: 20px;
-  font-family: Bebas neue;
-  text-decoration: none;  
+  font-family: "Bebas neue";
+  text-decoration: none;
+  padding: 0px 15px 0px 15px; 
+  gap: 5px;
+  margin: 2px;  
 }
 
 .cajaclientes{
@@ -141,6 +142,13 @@ nav button {
   right: 10px;
 }
 
+.close-btn {
+  position: absolute;
+  top: 10px; /* Ajusta según necesites */
+  right: 10px; /* Ajusta según necesites */
+  cursor: pointer;
+}
+
 .close-btn, .prev-btn, .next-btn {
   padding: 10px; 
   box-sizing: content-box;
@@ -188,11 +196,12 @@ nav button {
 }
 
 footer {
+  font-family: Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #ff0000;
+  background-color: #970000;
   width: 100%;
 }
 
