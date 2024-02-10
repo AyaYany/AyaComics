@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
 
             function loadChapterContent(chapterNumber) {
-                fetch('makochapters.json')
+                fetch('MAKOTADAS/makochapters.json')
                     .then(response => response.json())
                     .then(data => {
                         var chapters = Object.keys(data);
