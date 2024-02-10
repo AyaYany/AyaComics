@@ -1,0 +1,117 @@
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+   
+  }
+  .chapters-container {
+    padding-left: 20px;
+    padding-top: 10px;
+  }
+}
+
+body {
+  background-color: black;
+  margin: 0px;
+}
+
+.chapters-container{
+  display: flex;
+  flex-direction: column;
+  padding-left: 0px;
+  padding-top: 10px;
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #542f78;
+}
+.logo img {
+  margin-top: 20px;
+  width: 300px;
+  height: auto;
+} 
+
+.button {
+  display: block;
+  width: 100%;
+  height: 20px;
+  color:#542f78;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;;
+  border: none;
+  background-color: #a693b8;
+  font-family: Bebas Neue;
+  padding-bottom: 10px;
+  font-size: 25px; 
+  text-decoration: none;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+.cajones {
+  width: 300px;
+  height: 60px;
+  display: grid;
+  margin-bottom: 10px;
+  grid-template-columns: 60px 200px;
+  gap: 20px;
+  padding-left: 30px;
+  background-color: #fff;
+  /*border-radius: 8px;*/
+  /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);*/
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  overflow: hidden;
+  background-size: 200% 100%;
+  transition: background-position 1s ease;
+  background-image: linear-gradient(to left, #fff 50%, #542f78 50%);
+}
+
+
+.cajones:hover {
+  background-position: 100% 0;
+  color: #542f78;
+}
+
+.text-container a:hover {
+  color: #542f78;
+}
+
+.text-container {
+  margin-top: 5px;
+  padding-left: 0px;
+  padding-right: 20px;
+  font-size: 20px;
+  font-family:  Bebas Neue;
+  max-width: 100%;
+}
+
+.text-container a {
+  color: #fff;
+  text-decoration: none;
+  padding-right: 50px;
+}
+
+.thumbnail-container {
+  width: 60px;
+  height: 60px;
+  grid-column: 1 / span 1; 
+  align-self: center; 
+  padding-left: 10px;
+}
+
+.thumbnail-container a {
+  display: block; /* Added this property to make the link a block-level element */
+  width: 100%;
+  height: 100%;
+}
+
+.text-container a {
+  display: inline-block; /* Cambiado a inline-block */
+  width: 100%;
+  height: 100%;
+  padding: 0 10px; /* Añade espacio alrededor del enlace */
+}
