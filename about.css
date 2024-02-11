@@ -57,4 +57,35 @@ p {
 .contact-info a:hover {
     text-decoration: underline;
 }
+
+
+.lang {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
     
+  }
+  
+  .itemLang {
+    font-weight: bold;
+    font-family: 'helvetica';
+    font-weight: bolder;
+    font-size: 17px;
+    color: #ffffff;
+    background-color:#000000;
+    width: 200px;
+    height: 25px;
+    margin: 30px 20px 20px 0px;
+    border-radius: 10px;
+    border: none;
+  }
+  
+  .itemLang:hover {
+    background-color: #dcb9bb;
+  }
+  
+  .itemLang:active {
+    background-color:#ffffff;
+    color:#000000
+  }
+  
