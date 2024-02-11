@@ -1,65 +1,61 @@
 body {
     background-color: black;
     margin: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 header {
   display: flex;
-  flex-direction: row;
-  background-color: #000000;
- /* position: relative;*/
-  justify-content: center;
-}
-
-header a img {
-  width: 100px;
-  height: 100px;
-  margin: 0px;
-  /*position: absolute;*/ 
-  z-index: 2;
-}
-
-.derecha{
-  display: flex;
-  font-family: 'belanosima';
-  padding: 0px;
-  color: #fff;
   flex-direction: column;
   justify-content: center;
-  z-index: 1;
+  background-color: #970000;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 10px;
 }
-
-h1 {
-  font-size: 40px;
-  font-weight: bold;
+/*header h1 {
   margin: 10px;
+  background-color: #000000;
+}*/
+
+.logo {
+  margin: 10px 0px 10px 0px;
 }
 
-nav ul {
-  display: flex;
-  justify-content: center;
-  /*list-style: none;*/
-  margin: 0;
-  padding-bottom: 5px;
-  padding-left: 0px;
+.logo img {
+  max-width: 100px;
+  height: auto;
 }
 
-nav li {
-  margin: 0 10px;
-}
+nav {
+  margin: 0px;
+  padding: 0px;
+ }
 
 nav a {
-  color: #fff;
   text-decoration: none;
+  margin: 0px;
 }
+
+nav button {
+  color: #fff;
+  border: none;
+  background-color: #000000;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: "Bebas neue";
+  text-decoration: none;
+  padding: 0px 15px 0px 15px; 
+  gap: 5px;
+  margin: 2px;  
+}
+
 
 .containerminis{
   display: flex;
-
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
 }
 .minibox {
       display: flex;  
@@ -120,15 +116,7 @@ nav a {
       color: #56070C;
     }
   
-    .containerminis {
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      max-width: 700px;
-      max-height: auto;
-      justify-content: center; 
-      align-items: center;
-    }
+    
   
     
   
