@@ -11,7 +11,7 @@ const enData = {
   "episodes": [
     {"parrafo1": "Hi!, I'm Aya Yany, a passionate manga artist. I love to make spicy comics with a touch of random FUN things. In my free time, you can find me doing my webcomic Makoholic, or playing some Fire Emblem :3<br><br>My goal in this life is to finish all the comics i have in my mind, i hope i can make it! YoY"},
 
-    {"parrafo2": "Hi!, I'm Fevy! Makoholic editor and assistant of Aya Yany, IT director. In my free time, you can find enjoying some Blue Archive and my favourite game, Parasite Eve."},
+    {"parrafo2": "Hi!, I'm Fevy! Makoholic editor and assistant of Aya Yany, IT director. In my free time, you can find me enjoying some Blue Archive and my favourite game, Parasite Eve."},
 
     {"parrafo3": "ALL AUDIENCES version of Aya Yany, can be used for non +18 projects."}
   ]
