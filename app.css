@@ -122,9 +122,10 @@ main {
   left: 40%; /* Alinea la izquierda del texto al borde izquierdo del contenedor padre */    
   color: rgb(0, 0, 0); /* Color del texto */
   text-align: center; /* Alineación del texto */
-  font-size: 20px; /* Tamaño de la fuente del texto */
   margin: 0px 0px 20px 0px;
   z-index: 1; /* Para asegurar que el texto esté encima de la imagen */
+  font-size: 2.5vw; /* Tamaño relativo al ancho de la ventana */
+  max-width: 100%; 
 }
 
 .episode {
@@ -177,6 +178,14 @@ footer{
   color:#fff;
   text-align: center;
 }
+
+@media (min-width: 786px) {
+  .letrasbanner {
+    font-size: 20px; /* Tamaño de fuente fijo para pantallas grandes */
+  }
+}
+
+
 @media only screen and (max-width: 600px) {
   body {
     font-size: 14px;
@@ -186,6 +195,9 @@ footer{
     justify-content: center;
   }
   
+  header {
+    padding: 10px 0px 0px 0px;
+  }
   header a img {
     width: 80px;
     height: auto;
@@ -194,16 +206,14 @@ footer{
   
   .derecha {
     display: flex;
-    margin: 5px 0px 10px 0px;
+    margin: 0px 0px 10px 0px;
   }
 
   .derecha h1 {
-    font-size: 40px;
-    padding: 0px;
-    margin: 10px 60px 0px 0px;
+    font-size: 10vw;
+    padding: 0px 0px 0px 0px;
+    margin: 10px 50px 0px 0px;
     text-align: center;
-    justify-content: center;
-    align-items: start;
   }
 
   .lang {
