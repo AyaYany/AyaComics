@@ -4,6 +4,8 @@ body {
   font-family: sans-serif;
   margin: 0;
   background-color: #670010;
+  justify-content: center;
+  align-items: center;
 }
 
 header {
@@ -12,7 +14,7 @@ header {
   background-color: #000000;
   justify-content: center;
   align-items: center;
-  
+  width: 100%;
 }
 
 header a img {
@@ -96,6 +98,33 @@ main {
 .itemLang:active {
   background-color:#ffffff;
   color:#000000
+}
+
+.banner {
+  display: flex;
+  max-width: 100%;
+  position: relative; /* Establece el contexto de posicionamiento para los elementos internos */
+  display: inline-block; /* Ajusta el tamaño del contenedo
+  r al contenido */
+  width: 800px;
+ margin: 0px 0px 20px 0px;
+}
+
+.banner img {
+  display: block; /* Para asegurarse de que la imagen no tenga espacios no deseados */
+  width: 100%; /* Ajusta el ancho de la imagen */
+  height: auto;
+}
+
+.letrasbanner {
+  position: absolute; /* Permite posicionar el elemento de texto de forma absoluta */
+  top: 5%; /* Alinea la parte superior del texto al borde superior del contenedor padre */
+  left: 40%; /* Alinea la izquierda del texto al borde izquierdo del contenedor padre */    
+  color: rgb(0, 0, 0); /* Color del texto */
+  text-align: center; /* Alineación del texto */
+  font-size: 20px; /* Tamaño de la fuente del texto */
+  margin: 0px 0px 20px 0px;
+  z-index: 1; /* Para asegurar que el texto esté encima de la imagen */
 }
 
 .episode {
@@ -273,7 +302,6 @@ footer{
     gap: 10px;
     justify-content: left;
     padding: 10px 0px 0px 5px;
-  
     }
 
 
@@ -283,6 +311,35 @@ footer{
     padding: 0px 0px 0px 0px;
     max-height: 180px;
   }
+
+  .banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    height: 100px;
+    margin:10px 0px 5px 0px;
+  }
+  .banner img {
+  width: 100%;
+  opacity: 10%;
+  }
+
+  .letrasbanner {
+    font-size: 12pt;
+    position: absolute; 
+    top: 5%; 
+    left: 0%; 
+    right: 0%; 
+    color: rgb(0, 0, 0);
+    outline: #ffffff;
+    margin: 0px 0px 20px 0px;
+    z-index: 1;
+
+    font-family: helvetica;
+    
+  }
+  
 
   .footer {
     margin-left:10px;
