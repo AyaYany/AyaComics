@@ -330,9 +330,10 @@ footer{
     height: 100px;
     margin:10px 0px 5px 0px;
   }
+
   .banner img {
-  width: 100%;
-  opacity: 10%;
+  content: url('IMAGES/bannercel.png');
+  height: 100%;
   }
 
   .letrasbanner {
