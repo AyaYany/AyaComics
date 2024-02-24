@@ -273,15 +273,21 @@ footer{
     padding: 0px;
   }
 
+.episode a{
+  display: block;
+  max-height: 200px;
+}
+
  .episode p {
     font-size: 14px;
     margin: 0px;
-    padding: 10px 10px 0px 5px;
+    padding: 5px 5px 0px 5px;
   }
 
   .letras p[data-section="episodes"][data-value="parrafo3"] {
     margin: 0px 10px 10px 5px;
-    padding: 0px; 
+    padding: 0px;
+    font-size: 13px;
 }
 
 .letras p[data-section="episodes"][data-value="parrafo2"] {
@@ -290,28 +296,34 @@ footer{
 }
 
 .letras p[data-section="episodes"][data-value="parrafo4"] {
-  margin: 20px 5px 10px 0px;
+  margin: 5px 5px 10px 0px;
   padding-right: 15px;
-  padding-top: 0px;
-  
+  padding-top: 0px; 
 }
 
 .text-container {
   margin: 5px 10px 10px 0px;
   padding: 0px 10px 0px 0px;
-  text-justify:inter-word;
+  font-size: 13px;
 }
-
-  .makolinks{
+.text-container br {
+  content: "";
+  margin: 2em;
+  display: block;
+  font-size: 10%;
+}
+.makolinks{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     text-decoration: none;
     color: #56070C;
-    list-style: none;    margin: 0px;
+    list-style: none;
+    margin: 10px 0px 0px 5px;
     gap: 10px;
     justify-content: left;
-    padding: 10px 0px 0px 5px;
+    padding: 0px;
+    line-height: 0.5;
     }
 
 
@@ -346,9 +358,7 @@ footer{
     outline: #ffffff;
     margin: 0px 0px 20px 0px;
     z-index: 1;
-
     font-family: helvetica;
-    
   }
   
 
