@@ -21,7 +21,7 @@ header a img {
   display: block;
   width: 100px;
   height: auto;
-  margin: 15px 0px 0px 0px;
+  margin: 15px px 0px 0px;
 }
 
 .derecha{
@@ -31,8 +31,10 @@ header a img {
   color: #fff;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  /*z-index: 1;*/
+  margin:10px 0px 0px 0px;
+  gap:10px;
+  
+  
 }
 
 .derecha h1 {
@@ -40,7 +42,7 @@ header a img {
   font-size: 50px;
   font-weight: bold;
   margin: 0px;
-  padding: 10px 0px 0px 0px;
+  padding: 10px 0px 0px px;
 }
 
 nav ul {
@@ -51,8 +53,7 @@ nav ul {
 }
 
 nav ul li {
-  margin-left: 0px;
-  margin-right: 20px;
+  margin: 0px 10px 0px 10px;
   font-size: 17px;
 }
 
@@ -70,11 +71,47 @@ main {
   justify-content: center;
 }
 
+.misComics {
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.commicontainer {
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  background-color: black;
+  padding: 0px 10px 0px 10px;
+}
+
+.commissions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 20px;
+  
+}
+.commistitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: COMFORTAA;
+  font-size: 40px;
+  color: white;
+  margin: 20px 0px 20px 0px;
+}
+
 .lang {
   display: flex;
   justify-content: center;
   margin: 0px;
-  
 }
 
 .itemLang {
@@ -102,30 +139,33 @@ main {
 
 .banner {
   display: flex;
-  max-width: 100%;
-  position: relative; /* Establece el contexto de posicionamiento para los elementos internos */
-  display: inline-block; /* Ajusta el tamaño del contenedo
-  r al contenido */
-  width: 800px;
- margin: 0px 0px 20px 0px;
-}
-
-.banner img {
-  display: block; /* Para asegurarse de que la imagen no tenga espacios no deseados */
-  width: 100%; /* Ajusta el ancho de la imagen */
-  height: auto;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin: 0px 0px 0px 0px;
+  background-color: #000000;
+  width: 100%;
 }
 
 .letrasbanner {
-  position: absolute; /* Permite posicionar el elemento de texto de forma absoluta */
-  top: 5%; /* Alinea la parte superior del texto al borde superior del contenedor padre */
-  left: 40%; /* Alinea la izquierda del texto al borde izquierdo del contenedor padre */    
-  color: rgb(0, 0, 0); /* Color del texto */
-  text-align: center; /* Alineación del texto */
-  margin: 0px 0px 20px 0px;
-  z-index: 1; /* Para asegurar que el texto esté encima de la imagen */
-  font-size: 2.5vw; /* Tamaño relativo al ancho de la ventana */
-  max-width: 100%; 
+  color: rgb(255, 255, 255); 
+  text-align: center;
+  margin: 10px 0px 10px 0px;
+  font-size: 17px; 
+  max-width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: red;
+}
+
+.contenedorMis{
+  margin: 0px 0px 50px 0px;
+}
+
+.misComics {
+  gap:20px;
 }
 
 .episode {
@@ -134,10 +174,22 @@ main {
   background-color: #dfd1d1;
   border-radius: 5px;
   padding: 10px 0px 10px 0px;
-  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 0px rgb(0, 0, 0);
   margin-bottom: 20px;
-  max-width: 250px;  
+  max-width: 250px;
 }
+
+.commepisode {
+  display: flex;  
+  flex-direction: column; 
+  background-color: #dfd1d1;
+  border-radius: 5px;
+  padding: 10px 0px 10px 0px;
+  box-shadow: 5px 5px 0px rgb(103, 0, 16); 
+  margin-bottom: 20px;
+  max-width: 200px;
+}
+
 
 .letras h2 {
   font-family: "Comfortaa";
@@ -169,11 +221,21 @@ p {
   height: auto;
 }
 
+.commepisode img {
+  flex: 1;  
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .episode ul li a{
   text-decoration: none;
   color: #56070C;
 }
-
+.commepisode ul li a{
+  text-decoration: none;
+  color: #56070C;
+}
 footer{
   color:#fff;
   text-align: center;
@@ -181,7 +243,7 @@ footer{
 
 @media (min-width: 786px) {
   .letrasbanner {
-    font-size: 20px; /* Tamaño de fuente fijo para pantallas grandes */
+    font-size: 15px; /* Tamaño de fuente fijo para pantallas grandes */
   }
 }
 
@@ -247,13 +309,34 @@ footer{
   main {
     margin: 5px;
   }
-
+.commistitle {
+  text-align: center;
+}
+.commissions{
+gap:20px;
+padding: 0px;
+}
+.commicontainer{
+  padding: 20px;
+}
+.contenedorMis {
+  margin: 0px;
+  gap:20px;
+}
   .episode {
     flex-direction: row;
     max-width: 100%;
     max-height: 300px;
-    margin: 5px;
     padding: 0px 0px 0px 10px;
+    margin: 0px;
+  }
+  .commepisode {
+    flex-direction: row;
+    max-width: 350px;
+    width: 100%;
+    padding: 0px 0px 0px 10px;
+    margin: 0px;
+    
   }
 
   .episode img {
@@ -262,6 +345,16 @@ footer{
     margin-right: 10px;
   }
   .episode a img{
+    padding: 0px;
+    margin-bottom: 0px;
+  }
+
+  .commepisode img {
+    max-height: 200px;
+    width: auto;
+    margin-right: 10px;
+  }
+  .commepisode a img{
     padding: 0px;
     margin-bottom: 0px;
   }
@@ -278,16 +371,21 @@ footer{
   max-height: 200px;
 }
 
- .episode p {
-    font-size: 14px;
-    margin: 0px;
-    padding: 5px 5px 0px 5px;
-  }
+.episode p {
+  font-size: 14px;
+  margin: 0px;
+  padding: 5px 5px 0px 5px;
+}
+.commepisode p {
+  font-size: 15px;
+  margin: 0px;
+  padding: 5px 5px 0px 5px;
+}
 
-  .letras p[data-section="episodes"][data-value="parrafo3"] {
-    margin: 0px 10px 10px 5px;
-    padding: 0px;
-    font-size: 13px;
+.letras p[data-section="episodes"][data-value="parrafo3"] {
+  margin: 0px 10px 10px 5px;
+  padding: 0px;
+  font-size: 13px;
 }
 
 .letras p[data-section="episodes"][data-value="parrafo2"] {
@@ -306,6 +404,20 @@ footer{
   padding: 0px 10px 0px 0px;
   font-size: 13px;
 }
+
+.text-comm {
+  margin: 5px 0px 0px 0px;
+  padding: 0px 10px 0px 0px;
+  font-size: 13px;
+}
+
+.text-comm br {
+  content: "";
+  margin: 2em;
+  display: block;
+  font-size: 10%;
+}
+
 .text-container br {
   content: "";
   margin: 2em;
@@ -326,7 +438,6 @@ footer{
     line-height: 0.5;
     }
 
-
   .letras {
     flex-direction: column;
     margin: 0px;
@@ -334,34 +445,13 @@ footer{
     max-height: 180px;
   }
 
-  .banner{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
-    height: 100px;
-    margin:10px 0px 5px 0px;
-  }
-
-  .banner img {
-  content: url('IMAGES/bannercel.png');
-  height: 100%;
-  }
-
   .letrasbanner {
     font-size: 12pt;
-    position: absolute; 
-    top: 5%; 
-    left: 0%; 
     right: 0%; 
-    color: rgb(0, 0, 0);
-    outline: #ffffff;
-    margin: 0px 0px 20px 0px;
-    z-index: 1;
+    color: rgb(255, 255, 255);
     font-family: helvetica;
   }
   
-
   .footer {
     margin-left:10px;
   }
