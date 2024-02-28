@@ -29,11 +29,15 @@ header {
 nav {
   margin: 0px;
   padding: 0px;
+  font-size: 0px;
+  gap: 20px;
  }
 
 nav a {
   text-decoration: none;
   margin: 0px;
+  font-size: 0px;
+ 
 }
 
 nav button {
@@ -45,10 +49,13 @@ nav button {
   font-family: "Bebas neue";
   text-decoration: none;
   padding: 0px 15px 0px 15px; 
-  gap: 5px;
-  margin: 2px;  
+  margin: 2px; 
+  gap: 20px; 
 }
 
+nav button:hover {
+cursor: pointer;
+}
 .cajaclientes{
   justify-content: center;
 }
