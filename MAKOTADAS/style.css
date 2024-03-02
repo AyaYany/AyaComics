@@ -8,8 +8,9 @@
 
 body {
     margin: 0px;
-    background-color: black;
+        padding: 0px 0px 50px 0px;
 }
+
 
 .chaplist {
     display: flex;
@@ -34,11 +35,12 @@ body {
 .navigation-controls-top {
     display: flex;
     justify-content: center; 
-    margin-top: 10px;
-    margin-bottom: 0px;
-
+ 
 }
 
+.navigation-controls{
+    margin: 10px 0px 20px 0px;
+}
 .previous,
 .home,
 .next {
@@ -50,7 +52,7 @@ body {
     width: 80px;
     cursor: pointer;
     margin-inline: 6px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: helvetica;
 }
 
 .previous:hover,
@@ -78,10 +80,14 @@ body {
     height: 30px;
     width: auto;
     cursor: pointer;
-    margin-inline: 6px;
-    margin-top: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
+}
+.chapter_menu{
+    margin: 0px 0px 20px 0px;
+}
+.chapter_menu2{
+    margin: 10px 0px 10px 0px;
 }
 
 .chapter_menu:hover,
@@ -94,8 +100,5 @@ body {
     background-color: #2980b9;
 }
 
-.chapter_menu2 {
-    margin-bottom: 10px;
-    margin-top: 0px;
-}
+
 
