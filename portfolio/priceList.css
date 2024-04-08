@@ -73,6 +73,7 @@ margin: 0px
   font-family: Helvetica, sans-serif;
   padding: 0px 20px 0px 20px;
   text-justify:distribute;
+  font-size: 20px;
 }
 
 .flip-card {
@@ -93,6 +94,9 @@ margin: 0px
 .container img{
   width: 300px;
   height: auto;
+}
+.extra {
+ max-weight: 300px;
 }
 
 .clients {
