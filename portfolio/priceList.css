@@ -96,7 +96,8 @@ margin: 0px
   height: auto;
 }
 .extra {
- max-width: 300px;
+ width: 200px;
+height: auto;
 }
 
 .clients {
