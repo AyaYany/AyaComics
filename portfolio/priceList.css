@@ -199,3 +199,17 @@ footer p{
 #myBtn:hover {
   background-color: #555; /* Add a dark-grey background on hover */
 }
+
+.contact-info {
+  margin-top: 20px;
+  
+}
+
+.contact-info a {
+  color: #ff0000;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
