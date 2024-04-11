@@ -16,7 +16,9 @@ header {
   margin: 10px;
   background-color: #000000;
 }*/
-
+.logo a{
+  display: block;
+}
 .logo {
   margin: 10px 0px 10px 0px;
 }
@@ -26,28 +28,50 @@ header {
   height: auto;
 }
 
+
 nav {
   margin: 0px;
   padding: 0px;
  }
 
+nav button:hover {
+  cursor: pointer;
+}
+
 nav a {
   text-decoration: none;
   margin: 0px;
+  display: inline-block;
 }
 
 nav button {
   color: #fff;
   border: none;
   background-color: #000000;
-  border-radius: 10px;
-  font-size: 20px;
-  font-family: "Bebas neue";
+  border-radius: 5px;
+  font-size: 13pt;
   text-decoration: none;
-  padding: 0px 15px 0px 15px; 
-  gap: 5px;
-  margin: 2px;
+  padding: 0px 15px 0px 20px; 
+  margin: 5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
+
+.homebut {
+  color: #000000;
+  border: none;
+  background-color: #ffffff;
+  border-radius: 10px;
+  font-size: 13pt;
+  text-decoration: none;
+  padding: 0px 50px 0px 50px; 
+  margin: 3px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
 .yesno {
   color: #fff;
   display: flex;
@@ -57,10 +81,11 @@ nav button {
   text-align: center;
   font-family: Helvetica, sans-serif;
   padding: 0px 20px 0px 20px;
-  }
+  font-size: 15pt;
+}
 
 .yesno h1 {
-margin: 0px
+margin: 10px 0px 0px 0px;
 }
 
 .importantdetails {
@@ -73,7 +98,7 @@ margin: 0px
   font-family: Helvetica, sans-serif;
   padding: 0px 20px 0px 20px;
   text-justify:distribute;
-  font-size: 20px;
+  font-size: 17pt;
 }
 
 .flip-card {
@@ -94,10 +119,17 @@ margin: 0px
 .container img{
   width: 300px;
   height: auto;
+ 
 }
+.extra img{
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+}
+
 .extra {
- width: 200px;
-height: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .clients {
@@ -106,23 +138,21 @@ height: auto;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin: 20px 0px 70px 0px;
 }
 
 .clients a {
-  margin: 5px;
-  color: #ffffff;
-  text-decoration: none;
+  color: #fff;
+  border: none;
   background-color: #000000;
-  padding: 5px 10px;
   border-radius: 5px;
-}
-
-.text {
-  color: #000000;
-  font-size: 20px;
-  margin-top: 10px;
-  margin-bottom: 0px;
-  padding: 0px;
+  font-size: 13pt;
+  text-decoration: none;
+  padding: 0px 15px 0px 20px; 
+  margin: 5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 footer {
@@ -135,6 +165,21 @@ footer {
   align-items: center;
 }
 
+footer h1{
+  justify-content: center;
+  color: #000000;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+footer p{
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  padding: 0px;
+  font-weight: normal;
+}
 #myBtn {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
