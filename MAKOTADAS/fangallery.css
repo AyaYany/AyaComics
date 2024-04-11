@@ -34,19 +34,21 @@ nav {
 nav a {
   text-decoration: none;
   margin: 0px;
+  display: inline-block;
 }
 
 nav button {
   color: #fff;
   border: none;
   background-color: #000000;
-  border-radius: 10px;
-  font-size: 20px;
-  font-family: "Bebas neue";
+  border-radius: 5px;
+  font-size: 13pt;
   text-decoration: none;
-  padding: 0px 15px 0px 15px; 
-  gap: 5px;
-  margin: 2px;  
+  padding: 0px 15px 0px 20px; 
+  margin: 5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .cajaclientes{

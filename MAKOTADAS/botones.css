@@ -69,7 +69,7 @@ h2 {
   color: white;
   font-family: comfortaa;
 }
-p {
+.temporadabox p {
   color:white;
   font-family: comfortaa;
   text-align: center;
@@ -108,19 +108,25 @@ nav {
 nav a {
   text-decoration: none;
   margin: 0px;
+  display: inline-block;
 }
 
 nav button {
   color: #fff;
   border: none;
   background-color: #000000;
-  border-radius: 10px;
-  font-size: 20px;
-  font-family: "Bebas neue";
+  border-radius: 5px;
+  font-size: 13pt;
   text-decoration: none;
-  padding: 0px 15px 0px 15px; 
-  gap: 5px;
-  margin: 2px;  
+  padding: 0px 15px 0px 20px; 
+  margin: 5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+nav button:hover {
+  cursor: pointer;
 }
 
 .cajones {
@@ -185,4 +191,27 @@ nav button {
   width: 100%;
   height: 100%;
   padding: 0 10px; /* Añade espacio alrededor del enlace */
+}
+
+footer {
+  font-family: Helvetica, sans-serif;
+  background-color: #000000;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:white;
+  font-family: comfortaa;
+  text-align: center;
+  padding: 5px 0px 60px 0px;
+}
+footer a{
+  color: #9870c0;
+}
+.fottext {
+  margin: 0px 20px 0px 20px;
+}
+footer p{
+  margin-top: 50px;
 }
