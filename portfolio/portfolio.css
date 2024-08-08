@@ -369,6 +369,7 @@ footer p{
   flex-wrap: wrap;
   justify-content: center;
   margin: 0px;
+  padding: 0px;
 }
 
 .image-box {
@@ -383,6 +384,7 @@ footer p{
   height: 120%;
   object-fit: cover;
   width: 100%;
+  padding: 0px;
 }
 
 .section {
@@ -460,7 +462,7 @@ font-family: roboto;
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 400px) {
   /*.dropdown-content {
     left: 0;
     transform: none;
@@ -475,8 +477,8 @@ font-family: roboto;
     max-width: 100%;
     overflow-x: hidden; /* Evita el desplazamiento horizontal */
     box-sizing: border-box;
-
   }
+  
   .cabeza {
     display: flex;
     flex-direction: row;
@@ -500,6 +502,7 @@ font-family: roboto;
     padding-bottom: 0px;
     width: 100%;
     justify-content: center;
+    margin-bottom: 10px;
   }
   /*header h1 {
     margin: 10px;
@@ -508,12 +511,13 @@ font-family: roboto;
   
   .logo {
     height:fit-content;
-    margin: 10px 10px 10px 20px;
+    margin: 0px;
     display: block; 
   }
   
   .logo img {
     max-width: 100px;
+    max-height: 100px;
     height: auto;
   }
 
@@ -529,6 +533,11 @@ font-family: roboto;
     z-index: 999;
   }
   
+  nav {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+  }
   /* Adjust section spacing for mobile */
   
   nav button {
@@ -540,6 +549,7 @@ font-family: roboto;
 
   nav a {
     display: block;
+    margin: 0px;
   }
 
   .dropdown {
@@ -575,25 +585,34 @@ font-family: roboto;
     display: flex;
   }
   
+  .section {
+    border: none;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+  }
+
 
   .container{
+
+    border:none;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 0px;
+    padding-left: 10px;
     margin: 0px;
     max-width: 420px;
     max-height: auto;
   }
   
   .image-box {
-    display: block;
+   
     align-items: center;
     max-width: 180px;
     max-height: 180px;
     overflow: hidden; 
-    margin:0px;
-    padding: 0px;
     overflow: hidden;
   }
   
@@ -621,7 +640,8 @@ font-family: roboto;
   }
  
  footer {
-    height: 400px;
+  margin-top: 20px;
+    height: 500px;
     max-width: 100%;
   }
 .clients {
@@ -633,13 +653,14 @@ footer h1{
   font-size: 20pt;
 }
   footer p {
-    margin-top: 70px;
+    margin-top: 20px;
+    align-items: start;
   }
 
   
   #myBtn {
     position: fixed;
-    bottom: 140px; /* Place the button at the bottom of the page */
+    bottom: 170px; /* Place the button at the bottom of the page */
   right: 20px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
   
