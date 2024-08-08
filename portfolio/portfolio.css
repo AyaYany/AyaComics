@@ -1,6 +1,7 @@
 html {
   overflow-x: hidden;
 }
+
 body {
   width: 100%;
   max-width: 100%;
@@ -11,6 +12,14 @@ body {
   margin: 0;
 } 
 
+.cabeza {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 0px;
+}
 header {
   display: flex;
   align-items: center;
@@ -18,32 +27,25 @@ header {
   flex-direction: column;
   background-color: #970000;
   color: #fff;
-  text-align: center;
   padding-bottom: 10px;
   width: 100%;
-  justify-content: center;
   margin: 0;
   text-decoration: none;
 }
 
-.homegallery {
+.cabeza {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items:center;
+  padding: 10px;
 }
-.homegallery a {
-  text-decoration: none;
-}
-
-/*header h1 {
-  margin: 10px;
-  background-color: #000000;
-}*/
 
 .logo {
   height:fit-content;
   margin: 10px 0px 10px 0px;
   display: block; 
+  margin: 0px 10px 0px 0px;
 }
 
 .logo img {
@@ -51,27 +53,16 @@ header {
   height: auto;
 }
 
-.next img{
-  max-width: 24px;
-  height: auto;
-}
 nav {
-  margin: 5px;
   padding: 0px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
+  margin: 0px 5px 0px 5px;
   justify-content: center;
 }
 
 nav a {
-  width: auto;
-  text-decoration: none;
-  display: inline-block;
-}
-
-nav button {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -79,17 +70,22 @@ nav button {
   border: none;
   background-color: #000000;
   border-radius: 50px;
-  font-size: 10pt;
+  font-size: 12pt;
   text-decoration: none;
   padding: 0px 20px 0px 20px; 
-  margin: 5px;
+  margin: 5px 5px 5px 5px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
   cursor: pointer;
 }
 
-.homebut {
+nav img {
+  max-width: 24px;
+  height: auto;
+}
+
+.homegallery a {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -97,22 +93,21 @@ nav button {
   border: none;
   background-color: #ffffff;
   border-radius: 50px;
-  font-size: 13pt;
-  padding: 0px 50px 0px 50px; 
-  margin: 3px;
+  font-size: 12pt;
+  padding: 2px 20px 2px 20px; 
+  margin: 5px 0px 5px 0px;
+  cursor: pointer;
   font-family: roboto;
   font-weight: 500;
   text-decoration: none;
 }
-.homebut a{
-  cursor: pointer;
-}
 
-.homebut:hover {
+
+.homegallery a:hover {
   -webkit-animation: blink-2 0.9s both;
           animation: blink-2 0.9s both;
 }
-.homebut:active {
+.homebut a:active {
     -webkit-animation: blink-2 0.9s both;
             animation: blink-2 0.9s both;
 }
@@ -151,26 +146,27 @@ nav button {
   }
 }
 
-
-
-.dropbtn {
-  font-family: roboto;
+.dropbtn a{
+  font-family: "Poppins", sans-serif;
   display: flex;
   align-items: center;
   background-color: #000000;
   color: white;
-  padding: 10px 20px 10px 20px;
-  font-size: 16px;
-  margin: 10px;
+  padding: 0px 20px 0px 20px;
+  font-size: 12pt;
   border: none;
   cursor: pointer;
   border-radius: 50px;
+  font-weight: 500;
+  margin: 0px;
 }
+
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
   display: inline-block;
+ 
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -179,12 +175,11 @@ nav button {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #000000;
   text-align: center;
-  background-color: #ffffff;
+  background: none;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  box-shadow: none;
+  z-index: 3;
   font-family: roboto;
   font-weight: 500;
 }
@@ -193,11 +188,12 @@ nav button {
 .dropdown-content a {
   align-items: center;
   justify-content: center;
-  color: black;
+  color: rgb(255, 255, 255);
   padding: 12px 16px;
   /*margin-left: 20px;*/
   text-decoration: none;
   display: flex;
+  margin: 0px 0px 5px 0px;
 }
 
 /* Change color of dropdown links on hover */
@@ -216,7 +212,6 @@ nav button {
 .dropdown:hover .dropbtn {
   background-color: #ffc5c5;
 }
-
 
 .image-box:hover {
   transform: scale(1.1);
@@ -246,7 +241,6 @@ nav button {
 
 .prev-btn,
 .next-btn {
-  
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -274,26 +268,6 @@ nav button {
   padding: 10px; 
   box-sizing: content-box;
 }
-
-/*
-.lightbox {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.lightbox img {
-  display: block;
-  margin: auto;
-  max-width: 90%;
-  max-height: 90%;
-  /*margin-top: 5%;
-}
-*/
 
 
 .clients {
@@ -353,7 +327,6 @@ footer h1{
   font-family: roboto;
 }
 footer p{
-  
   font-size: 15pt;
   padding: 0px;
   margin: 0;
@@ -372,12 +345,19 @@ footer p{
   padding: 0px;
 }
 
+.gallery img {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  display:inline-block;
+}
+
 .image-box {
   align-items: center;
   max-width: 210px;
   max-height: 210px;
-  overflow: hidden; 
-  
+  overflow: hidden;
+  padding: 5px;
 }
 
 .image-box img {
@@ -385,6 +365,7 @@ footer p{
   object-fit: cover;
   width: 100%;
   padding: 0px;
+  display: inline-block;
 }
 
 .section {
@@ -393,7 +374,7 @@ footer p{
   flex-wrap: wrap;
   background-color:#000000;
   max-width: 500px;
-  height: auto;
+  max-height: auto;
   align-items: center;
   margin: 20px;
   border-radius: 20px;
@@ -403,20 +384,20 @@ footer p{
 }
 
 .container {
+  justify-content: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 20px;
-  padding: 0px;
-  max-width: 420px;
+  max-width: 440px;
   max-height: auto;
+  margin: 10px;
 }
 
 h2 {
-  margin: 20px 0px 20px 0px;
+  margin: 15px 0px 10px 10px;
   border-radius: 50px;
-  font-size: 20pt;
-  padding: 5px 30px 5px 30px;
+  font-size: 15pt;
+  padding: 2px 30px 2px 30px;
   color: #ffffff;
   text-align: center;
   font-family: roboto;
@@ -427,10 +408,10 @@ h2 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: whitesmoke;
+  background-color:#c2a2a2;
   width: 100%;
-  
-font-family: roboto;
+  font-family: roboto;
+  z-index: 2;
 }
 
 /* Navbar links */
@@ -439,6 +420,8 @@ font-family: roboto;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   display: block;
+  margin: 2px;
+  z-index: 2;
 }
 
 /* Navbar link hover effect */
@@ -462,7 +445,7 @@ font-family: roboto;
 }
 
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 600px) {
   /*.dropdown-content {
     left: 0;
     transform: none;
@@ -478,19 +461,13 @@ font-family: roboto;
     overflow-x: hidden; /* Evita el desplazamiento horizontal */
     box-sizing: border-box;
   }
-  
-  .cabeza {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 10px;
-  }
+
   .homegallery{
     display: flex;
     flex-direction: column;
     align-items: start;
   }
+
   header {
     display: flex;
     align-items: center;
@@ -504,22 +481,6 @@ font-family: roboto;
     justify-content: center;
     margin-bottom: 10px;
   }
-  /*header h1 {
-    margin: 10px;
-    background-color: #000000;
-  }*/
-  
-  .logo {
-    height:fit-content;
-    margin: 0px;
-    display: block; 
-  }
-  
-  .logo img {
-    max-width: 100px;
-    max-height: 100px;
-    height: auto;
-  }
 
   .navbar {
     position: fixed;
@@ -532,25 +493,19 @@ font-family: roboto;
     max-width: 100%;
     z-index: 999;
   }
-  
-  nav {
-    display: flex;
-    flex-direction: row;
-    padding: 0px;
-  }
-  /* Adjust section spacing for mobile */
-  
-  nav button {
-    display: flex;
-    flex-direction: row;
-    font-size: 13pt;
-    
-  }
-
-  nav a {
-    display: block;
-    margin: 0px;
-  }
+.navbar a{
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  text-decoration: none;
+  display: block;
+  background-color: rgb(255, 255, 255);
+  margin: 3px;
+  width: 120px;
+  height: 20px;
+  font-weight: 400;
+  text-align: center;
+  padding: 2px;
+}
 
   .dropdown {
     position: relative;
@@ -563,11 +518,9 @@ font-family: roboto;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #000000;
     text-align:left;
-    background-color: #ffffff;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: none;
     z-index: 1;
     font-family: roboto;
     font-weight: 500;
@@ -578,42 +531,30 @@ font-family: roboto;
   .dropdown-content a {
     align-items:start;
     justify-content: start;
-    color: black;
     padding: 10px 10px;
     /*margin-left: 20px;*/
     text-decoration: none;
-    display: flex;
   }
   
   .section {
     border: none;
     width: 100%;
     padding: 0px;
-    margin: 0px;
-    justify-content: center;
-    align-items: center;
+    margin: 0px 0px 20px 0px;
+   
   }
 
-
   .container{
-
     border:none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-left: 10px;
     margin: 0px;
-    max-width: 420px;
-    max-height: auto;
+   
   }
   
   .image-box {
-   
-    align-items: center;
     max-width: 180px;
     max-height: 180px;
     overflow: hidden; 
-    overflow: hidden;
+    
   }
   
   .image-box img {
@@ -622,12 +563,12 @@ font-family: roboto;
     object-fit: cover;
     padding: 0;
     margin: 0;
-    display: block;
+    display: inline-block;
   }
 
   .gallery img {
     width: 100%;
-    padding: 10px;
+    padding: 0px;
     margin: 0px;
     transform: none; /* Anula la transformación de escala */
   }
@@ -644,6 +585,7 @@ font-family: roboto;
     height: 500px;
     max-width: 100%;
   }
+
 .clients {
 justify-content: center;
   align-items: center;
@@ -652,15 +594,16 @@ justify-content: center;
 footer h1{
   font-size: 20pt;
 }
-  footer p {
-    margin-top: 20px;
-    align-items: start;
-  }
+
+footer p {
+  margin-top: 20px;
+  align-items: start;
+}
 
   
   #myBtn {
     position: fixed;
-    bottom: 170px; /* Place the button at the bottom of the page */
+    bottom: 150px; /* Place the button at the bottom of the page */
   right: 20px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
   
