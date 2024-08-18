@@ -1,76 +1,79 @@
+const translations = {
+  en: {
+      title: "Frequently Asked Questions",
+      question1: "Do you take commissions?",
+      answer1: "The answer will be always YES, I usually have between 2-7 slots every month, with paid reservations available with one month of anticipation.",
+      question2: "What languages do you speak?",
+      answer2: "Spanish and English.",
+      question3: "What kind of work do you do?",
+      answer3: `I do everything from a charming chibi to what others call "disturbing", which I don't, I'll always find it interesting!<br>
+          -18 / +18 / yuri GL / yaoi BL / vore / female transformation / feet / scat / guro and more.`,
+      question4: "What kind of jobs do you NOT do?",
+      answer4: "Only chubby and related (personal trauma) (pregnancy and vore extensions don't bother me).",
+      question5: "If I want a commission what should I do?",
+      answer5: `First you should check this page: <a href="https://ayacomics.net/portfolio/priceList">COMMISSION DETAILS</a><br>
+          <b>Please check the important details</b> section to avoid misunderstandings.<br><br>Then send me an email to: <a href="mailto:your.aya_yany@hotmail.com">aya_yany@hotmail.com</a> or a Twitter message to <a href="https://twitter.com/aya_yany" target="_blank">@ayayanagisawa</a> with everything about the commission, from your questions to the details, I don't judge.`,
+      question7: "Do all payments have to be in full upfront at the beginning?",
+      answer7: "Yes, for single piece cases, for monthly pieces each piece can be paid at the beginning of the month where it will be worked on, or reserved the month prior.",
+      question8: "What is your currency?",
+      answer8: "All payments are in USD dollars with 5.9% PayPal fee.",
+      question9: "How long should I wait to see the finished commission?",
+      answer9: "I will mention you the exact timings before the payment, usually it is one month, since I work on several comics and I only have weekends for freelance slots.<br>In the case of reservations it's 2 months, but at least the slot will be secured.",
+      question10: "How can I contact you?",
+      answer10: `Via email: <a href="mailto:aya_yany@hotmail.com">aya_yany@hotmail.com</a> or Twitter message to <a href="https://twitter.com/aya_yany" target="_blank">@aya_yany</a>.`,
+      question11: "Why do you use emojis or smilies?",
+      answer11: "Because when I have to explain details, or how I work I sound bitter... (- ▽ -;) it's hard to speak professionally without sounding rude.",
+      question12: "Are there any returns?",
+      answer12: `No, I've never done any, that's why it's very important to check the following page: <a href="https://ayacomics.net/portfolio/priceList">COMMISSION DETAILS</a>.`,
+      question13: "Can I make a long-term manga?",
+      answer13: "Yes, it can be as long as you want, for that I have packages, each chapter can have a basic free cover."
+  },
+  es: {
+      title: "Preguntas Frecuentes",
+      question1: "¿Aceptas comisiones?",
+      answer1: "La respuesta siempre será SÍ, normalmente tengo entre 2-7 espacios cada mes, con reservas pagadas disponibles con un mes de anticipación.",
+      question2: "¿Qué idiomas hablas?",
+      answer2: "Español e inglés.",
+      question3: "¿Qué tipo de trabajo realizas?",
+      answer3: `Hago de todo, desde un encantador chibi hasta lo que otros llaman "perturbador", lo cual no me parece, ¡siempre lo encontraré interesante!<br>
+          -18 / +18 / yuri GL / yaoi BL / vore / transformación femenina / pies / scat / guro y más.`,
+      question4: "¿Qué tipo de trabajos NO haces?",
+      answer4: "Solo trabajos relacionados con personas rellenitas (trauma personal) (el embarazo y las extensiones de vore no me molestan).",
+      question5: "¿Qué debo hacer si quiero una comisión?",
+      answer5: `Primero deberías revisar esta página: <a href="https://ayacomics.net/portfolio/priceList">DETALLES DE LA COMISIÓN</a><br>
+          <b>Por favor, revisa la sección de detalles importantes</b> para evitar malentendidos.<br><br>Luego envíame un correo electrónico a: <a href="mailto:your.aya_yany@hotmail.com">aya_yany@hotmail.com</a> o un mensaje en Twitter a <a href="https://twitter.com/aya_yany" target="_blank">@ayayanagisawa</a> con todos los detalles de la comisión, no juzgo.`,
+      question7: "¿Todos los pagos deben hacerse por completo al principio?",
+      answer7: "Sí, en el caso de piezas individuales, para piezas mensuales cada una se puede pagar al comienzo del mes en que se trabajará, o reservar el mes anterior.",
+      question8: "¿Cuál es tu moneda?",
+      answer8: "Todos los pagos son en dólares estadounidenses con una tarifa de PayPal del 5.9%.",
+      question9: "¿Cuánto tiempo debo esperar para ver la comisión terminada?",
+      answer9: "Te mencionaré los tiempos exactos antes del pago, usualmente es un mes, ya que trabajo en varios cómics y solo tengo los fines de semana para trabajos freelance.<br>En el caso de reservas, son 2 meses, pero al menos el espacio estará asegurado.",
+      question10: "¿Cómo puedo contactarte?",
+      answer10: `Por correo electrónico: <a href="mailto:aya_yany@hotmail.com">aya_yany@hotmail.com</a> o mensaje de Twitter a <a href="https://twitter.com/aya_yany" target="_blank">@aya_yany</a>.`,
+      question11: "¿Por qué usas emojis o caritas?",
+      answer11: "Porque cuando tengo que explicar detalles, o cómo trabajo, sueno amargada... (- ▽ -;) es difícil hablar profesionalmente sin sonar grosera.",
+      question12: "¿Hay devoluciones?",
+      answer12: `No, nunca he hecho ninguna, por eso es muy importante revisar la siguiente página: <a href="https://ayacomics.net/portfolio/priceList">DETALLES DE LA COMISIÓN</a>.`,
+      question13: "¿Puedo hacer un manga a largo plazo?",
+      answer13: "Sí, puede ser tan largo como desees, para eso tengo paquetes, cada capítulo puede tener una portada básica gratis."
+  }
+};
+
+function translateFaq(lang) {
+  document.querySelector('.Preguntas h1').textContent = translations[lang].title;
+
+  for (let i = 1; i <= 13; i++) {
+      if (translations[lang][`question${i}`] && translations[lang][`answer${i}`]) {
+          document.querySelector(`.question${i}`).textContent = translations[lang][`question${i}`];
+          document.querySelector(`.answer${i}`).innerHTML = translations[lang][`answer${i}`];
+      }
+  }
+}
+
+// Example usage
 const langButtons = document.querySelectorAll('.itemLang');
-const questions = document.querySelectorAll('.faqItem h2');
-const answers = document.querySelectorAll('.faqItem p');
-const originalQuestions = Array.from(questions).map(question => question.innerHTML);
-const originalAnswers = Array.from(answers).map(answer => answer.innerHTML);
-
-
-const esData = {
-        "faqItem": [
-            {"question1": "¿Qué es esto, dónde estoy?",
-            "answer1": "Te encuentras en mi página web (⁠ʘ⁠ᴗ⁠ʘ⁠✿⁠) que me hizo chatGPT y yo la retoqué (tuve que estudiar tantito tambien, ಥ⁠‿⁠ಥ fue horrible).\n La uso para mi portafolio y para almacenar todo lo que hago y que no puedo subir a ningun lado por ser para adultos."},
-          
-            {"question2": "¿Qué idiomas hablas?",
-            "answer2": "Español e inglés."},
-          
-            {"question3": "¿Qué tipo de trabajo haces?",
-            "answer3": "Hago de todo, desde un chibi encantador hasta lo mas perturbador que quieras.<br> cute / couples / mecha / pokemon / +18 / yuri GL / yaoi BL / vore / female transformation / pies / scat / guro y más"},
-          
-            {"question4": "¿Qué tipo de trabajos <b>NO</b> haces?",
-            "answer4": "Solo gorditas y relacionados (por trauma personal) (embarazo y las extensiones del vore no me molestan)."},
-          
-            {"question5": "Si quiero una comisión, ¿qué debo hacer?",
-            "answer5": "Primero tendrías que ver esta página: <b><a href='https://ayacomics.net/portfolio/priceList'>COMMISSION DETAILS</a></b> Favor de revisar bien la sección de detalles importantes para evitar malentendidos.<br>Luego enviarme un correo a: <a href='mailto:your.aya_yany@hotmail.com'>aya_yany@hotmail.com</a> o mensaje por twitter a <a href='https://twitter.com/ayayanagisawa' target='_blank'>@ayayanagisawa</a> con todo lo referente a la comisión, desde tus preguntas hasta los detalles."},
-          
-            {"question6": "¿Cómo sé si tienes comisiones abiertas?",
-            "answer6": "No hay manera de saberlo, usualmente abro un par de slots al mes, pero se llenan rápido. No pasa nada si envias correo para saber cuando hay espacio e incluso se puede hacer una reservasíon para el mes siguiente.<br><b>Acerca de las reservasiones:</b> Solo puedo aceptarlas para el mes siguiente, por si acaso algo pase y no pueda, no quisiera que hubiesen malentendidos."},
-          
-            {"question7": "¿Todos los pagos deben hacerse completos al principio?",
-            "answer7": "Sí, para casos de piezas únicas, para piezas mensuales cada pieza se puede pagar al principio del mes en el que se trabajará."},
-          
-            {"question8": "¿Cuál es tu moneda?",
-            "answer8": "Todos los pagos son en dólares estadounidenses con un 5.9% de PayPal."},
-          
-            {"question9": "¿Cuánto tiempo debo esperar para ver la comisión terminada?",
-            "answer9": "El tiempo te lo mencionaré antes del pago, usualmente es de un mes, ya que trabajo en varios comics y solo tengo los fines de semana para slots independientes."},
-          
-            {"question10": "¿Cómo puedo contactarte?",
-            "answer10": "Por correo electrónico: <a href='mailto:your.aya_yany@hotmail.com'>aya_yany@hotmail.com</a> o mensaje de Twitter a <a href='https://twitter.com/ayayanagisawa' target='_blank'>@ayayanagisawa</a>"},
-          
-            {"question11": "¿Por qué usas emojis o caritas?",
-            "answer11": "Porque en el momento de explicar cómo trabajo sueno amargada... es difícil hablar profesionalmente."},
-          
-            {"question12": "¿Hay devoluciones?",
-            "answer12": "No, nunca he hecho, pero por eso se pide revisar bien todo lo detallado en la siguiente pagina: <b><a href='https://ayacomics.net/portfolio/priceList'>COMMISSION DETAILS</a></b>"},
-          
-            {"question13": "¿Puedo hacer un manga a largo plazo?",
-            "answer13": "Sí, puede ser tan largo como quieras, para eso tengo paquetes, cada capítulo puede tener una portada básica gratuita."}
-            ]
-          }
-          
-        
-
-          function changeLanguage(lang) {
-            if (lang === 'es') {
-              questions.forEach((question, index) => {
-                question.innerHTML = esData.faqItem[index][`question${index + 1}`];
-              });
-              answers.forEach((answer, index) => {
-                answer.innerHTML = esData.faqItem[index][`answer${index + 1}`];
-              });
-            } else {
-                questions.forEach((question, index) => {
-                    question.innerHTML = originalQuestions[index];
-                  });
-                  answers.forEach((answer, index) => {
-                    answer.innerHTML = originalAnswers[index];
-                  });
-            }
-          }
-          
-          langButtons.forEach(button => {
-            button.addEventListener('click', function() {
-              const lang = this.getAttribute('data-lang');
-              changeLanguage(lang);
-            });
-          });
+langButtons.forEach(button => {
+  button.addEventListener('click', () => {
+      translateFaq(button.getAttribute('data-lang'));
+  });
+});
