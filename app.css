@@ -188,14 +188,16 @@ nav img {
 }
 
 .intro {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
   margin: 0px;
-  max-width: 100%;
-  
+  height: 501px;
+  width: 650px;
+  padding: 0px;
 }
 
 .introcontainer {
@@ -203,11 +205,16 @@ nav img {
   flex-direction: column;
   align-items: center;
   margin:0;
-  z-index: 3;
-  position: relative;
-  left:350px;
-  width: 320px;
-  top: 50px;
+  z-index: 1;
+  position: absolute;
+  left: 0%;
+  width: 350px;
+  top: 40%;
+  background-color: #fff;
+  border-radius: 20px;
+  border-style: double;
+  border-width: 10px;
+
 }
 .intro p{
   color: black;
@@ -215,22 +222,25 @@ nav img {
   font-weight:500;
   font-size: 12pt;
   text-align:justify;
-text-align: center;
+  text-align: center;
 }
 
-.intro a{
-  display: inline-block;
+.ComicBot {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  align-items: center;
 }
-.introcontainer a{
-  width: 250px;
+.ComicBot a{
   padding: 5px 10px 5px 15px;
   border-radius: 20px;
   background-color: #000000;
   color: #dfd1d1;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
+  font-weight: 500;
   font-size: 12pt;
-  margin: 0px 0px 10px 15px;
+  margin: 5px 0px 10px 0px;
   
 }
 .introcontainer a:hover{
@@ -244,13 +254,15 @@ text-align: center;
 }
 
 .intro img {
-  position: relative;
+  position: absolute;
   object-fit: contain;
   width: 350px;
   height: auto;
-  right: 280px;
+  right: 0%;
+  top: 16%;
   z-index: 2;
 }
+/*
 .fonditointro {
   flex-shrink: 0;
   width: 560px;
@@ -262,7 +274,7 @@ text-align: center;
   z-index: 1;
   position: relative;
   top: 50px;
-}
+}*/
 main {
   display: flex;
   flex-direction: column;
@@ -409,16 +421,22 @@ display: flex;
   width: 100%;
 }
 
-
 footer{
+  margin-top: 20px;
+  margin-bottom: 100px;
   position: relative;
   display: flex;
   flex-direction: column;
-  color:#fff;
+  color: black;
   align-items: center;
   padding-bottom: 40px;
   font-family: roboto;
   max-width: 100%;
+  width: 300px;
+  background-color: #fff;
+  border-width: 10px;
+  border-style: double;
+  border-radius: 40px;
 }
 footer p{
   max-width: 250px;
@@ -457,7 +475,6 @@ footer p{
 
 
 .fondoBotones img{
-
   right: 0;
   max-width: 250px;
   height: auto;
@@ -504,8 +521,9 @@ footer p{
 #background {
  /* filter: blur(2px);
   -webkit-filter: blur(2px);*/
-    position: absolute;
-    top: 20;
+    position: fixed;
+    top: 0;
+    left: 0;
     max-width: 100%;
     width: 100%;
     height: 100%;
@@ -551,8 +569,7 @@ footer p{
 }
 
 
-
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
 
   body{
     padding: 0;
@@ -582,9 +599,184 @@ footer p{
     animation-name: slide3;
  
 }
-header {
-  padding-top: 20px;
+
+.cabeza{
+  padding: 10px 0px 5px 0px;
 }
+  .cabeza h1{
+    font-size: 20pt;
+
+  }
+  .logo img{
+    padding: 0px;
+    max-width: 70px;
+    max-height: auto;
+    }
+nav a{
+  font-size: 10pt;
+  margin: 3px;
+}
+.lang button{
+font-size: 10pt;
+padding: 2px 15px 2px 15px;
+}
+
+.intro{
+  max-width: 100%;
+  height:415px;
+}
+.intro p{
+  font-size: 10pt;
+}
+
+.introcontainer a{
+  width: 180x;
+  text-align: center;
+  padding: 6px;
+  font-size: 10pt;
+  margin: 2px;
+}
+.intro img{
+  width: 200px;
+  top: 42%;
+  left: 53%;
+}
+.introcontainer{
+  padding: 5px;
+  width: 210px;
+  top: 40%;
+  left: 3%;
+}
+.introcontainer p{
+  margin: 2px 0px 5px 0px;
+}
+
+#background{
+  top: 30px;
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.boxcomic{
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.boxminis h2,
+.combox h2,
+.box h2 {
+font-size: 17pt;
+}
+
+  .combox,
+  .box {
+    width: 350px;
+    height: 230px;
+    margin: 2px;
+    padding: 3px;
+    border-radius: 30px;
+  }
+  .boxminis{
+    width: 350px;
+    height: auto;
+  }
+  .letras{
+margin: 12px;
+  }
+  .letras p{
+margin: 0px;
+  }
+  main {
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+ 
+  .comisiones h1{
+  font-size: 20pt;
+  }
+  
+  .mywebcomics{
+    max-width: 100%;
+    padding: 30px;
+    align-items: center;
+  }
+  
+  .mywebcomics h1{
+    font-size: 40pt;
+    text-align: center;
+  }
+  .titlecommi h1 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 40pt;
+  }
+.containercover{
+ min-width: 140px;
+ max-width: 150px;
+ max-height: 200px;
+}
+  .boxcomic,
+  .boxcomisiones,
+  .boxminis {
+    max-width: 100%;
+    padding: 0px;
+  }
+  .boxminis img,
+.combox img,
+.box img {
+  width: 100%;
+  height: 105%;
+}
+.letras p{
+  margin: 5px 0px 5px 0px;
+}
+
+  
+  .titlecommi{
+  margin: 0px;
+  max-width: 100%;
+  }
+  .titlecommi h1{
+    padding: 20px;
+    font-size: 30pt;
+  }
+
+}
+/*
+
+@media only screen and (max-width: 394px) {
+
+  body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .slide0 {
+    background: url('fondo/11.jpg') no-repeat center center/cover;
+    animation-name: slide0;
+}
+
+.slide1 {
+    background: url('fondo/22.jpg') no-repeat center center/cover;
+    animation-name: slide1;
+}
+
+.slide2 {
+    background: url('fondo/33.jpeg') no-repeat center center/cover;
+    animation-name: slide2;
+}
+
+.slide3 {
+    background: url('fondo/44.jpg') no-repeat center center/cover;
+    animation-name: slide3;
+ 
+}
+
   .cabeza{
   
     padding: 10px 0px 5px 0px;
@@ -599,24 +791,30 @@ header {
       max-height: auto;
       }
   nav a{
-    font-size: 13pt;
+    font-size: 12pt;
+    margin: 2px;
   }
+.lang button{
+  font-size: 12pt;
+  padding: 2px 10px 2px 10px;
 
+}
 .intro {
-  height: 660px;
+  height: 482px;
 }
 .intro img{
-  right: 30%;
-  top:24.5%;
-  width: 280px;
+  right: 50%;
+  top:25%;
+  width: 200px;
 }
 .introcontainer{
-  width: 200px;
-  left: 46%;
-  top: 21%;
+  
+  left: 60%;
+  top: 22%;
 }
 .introcontainer p{
-  font-size: 14pt;
+  width: 320px;
+  font-size: 12pt;
   text-shadow:
    -1px -1px 0 #dfd1d1,  
     1px -1px 0 #dfd1d1,
@@ -631,14 +829,10 @@ header {
   border: white;
 border-width: 2px;
 border-style:outset; 
+padding: 1px;
 
 }
-.fonditointro{
-  width: 250px;
-  height: 330px;
-  right:7.5%;
-  top: 20%;
-}
+
 .containercover{
   min-width:140px;
   max-width: 140px;
@@ -660,14 +854,14 @@ font-size: 17pt;
   
   .combox,
   .box {
-    width: 380px;
+    width: 350px;
     height: 230px;
-    margin: 8px;
+    margin: 2px;
     padding: 3px;
     border-radius: 30px;
   }
   .boxminis{
-    width: 380px;
+    width: 350px;
     height: auto;
   }
   .letras{
@@ -799,160 +993,6 @@ main{
 .letras p{
   margin: 0px;
 }
-@media only screen and (max-width: 393px) {
-
-  body{
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
- 
-
-  .cabeza{
-  
-    padding: 10px 0px 5px 0px;
-  }
-    .cabeza h1{
-      font-size: 20pt;
-
-    }
-    .logo img{
-      padding: 0px;
-      max-width: 70px;
-      max-height: auto;
-      }
-  nav a{
-    font-size: 12pt;
-  }
-.lang{
-  font-size: 12pt;
-}
-.intro {
-  height: 482px;
-}
-.intro img{
-  right: 50%;
-  top:25%;
-  width: 200px;
-}
-.introcontainer{
-  
-  left: 60%;
-  top: 22%;
-}
-.introcontainer p{
-  width: 320px;
-  font-size: 12pt;
-  text-shadow:
-   -1px -1px 0 #dfd1d1,  
-    1px -1px 0 #dfd1d1,
-    -1px 1px 0 #dfd1d1,
-     1px 1px 0 #dfd1d1;
-     margin: 2px 0px 5px 0px;
-}
-.introcontainer a{
-  color: white;
-  width: 200px;
-  text-align: center;
-  border: white;
-border-width: 2px;
-border-style:outset; 
-padding: 1px;
 
 }
-.fonditointro{
-  width: 300px;
-  height: 230px;
-  right:22%;
-  top: 20%;
-}
-.containercover{
-  min-width:140px;
-  max-width: 140px;
-  height: 200px;
-  margin: 0px 0px 0px 10px;
-}
-
-
-.boxcomic{
-  max-width: 100%;
-  overflow: hidden;
-}
-
-.boxminis h2,
-.combox h2,
-.box h2 {
-font-size: 17pt;
-}
-  
-  .combox,
-  .box {
-    width: 350px;
-    height: 230px;
-    margin: 2px;
-    padding: 3px;
-    border-radius: 30px;
-  }
-  .boxminis{
-    width: 350px;
-    height: auto;
-  }
-  .letras{
-margin: 12px;
-  }
-  .letras p{
-margin: 0px;
-  }
-  main {
-      width: 100%;
-      padding: 0px;
-      margin: 0px;
-    }
- 
-  .comisiones h1{
-  font-size: 20pt;
-  }
-  
-  .mywebcomics{
-    max-width: 100%;
-    padding: 30px;
-    align-items: center;
-  }
-  
-  .mywebcomics h1{
-    font-size: 40pt;
-    text-align: center;
-  }
-  .titlecommi h1 {
-    margin: 0px;
-    padding: 0px;
-    font-size: 40pt;
-  }
-
-  .boxcomic,
-  .boxcomisiones,
-  .boxminis {
-    max-width: 100%;
-    padding: 0px;
-  }
-  .boxminis img,
-.combox img,
-.box img {
-  width: 100%;
-  height: 105%;
-}
-  
-  .titlecommi{
-  margin: 0px;
-  max-width: 100%;
-  }
-  .titlecommi h1{
-    padding: 20px;
-    font-size: 20pt;
-  }
-  
-}
-
-}
+*/
