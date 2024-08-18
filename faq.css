@@ -2,48 +2,194 @@ body {
     
     margin: 0;
     padding: 0;
-    background-color: #ff0000;
+    background-color:#970000;
+}
+header {
+  background-color: #000000;
+  width: 100%;
+  margin: 0px;
+
+}
+
+.cabeza {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items:center;
+  padding: 15px 0px 5px 0px;
+  color:white ;
+  font-family: poiret one;
+  justify-content: center;
+}
+.cabeza h1 {
+  margin:0px;
+  padding: 0px;
+  font-size: 30pt;
+}
+
+.logo {
+  height:fit-content;
+  margin: 10px 0px 10px 0px;
+  display: block; 
+  margin: 0px 10px 0px 0px;
+}
+
+.logo img {
+  max-width: 80px;
+  height: auto;
+}
+
+
+nav {
+  width: 100%;
+  padding: 0px 0px 3px 0px;;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0px;
+  justify-content: center;
+background-color: #000000;
+position:sticky;
+top: 0px;
+z-index: 10;
+}
+
+nav a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 10pt;
+  text-decoration: none;
+  padding: 3px 10px 3px 10px; 
+  margin: 5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  cursor: pointer;
+}
+nav a:hover{
+  background-color: #970000;
+ 
+}
+nav img {
+  max-width: 20px;
+  height: auto;
+}
+
+.dropbtn a{
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  color: white;
+  padding: 0px 20px 0px 20px;
+  font-size: 12pt;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  font-weight: 500;
+  margin: 0px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  background: none;
+  min-width: 160px;
+  box-shadow: none;
+  z-index: 20;
+  font-family: roboto;
+  font-weight: 500;
+  background-color: none;
+  border-radius: 0px 0px 10px 10px;
+  padding: 5px;
+  
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  /*margin-left: 20px;*/
+  text-decoration: none;
+  display: flex;
+  margin: 0px 0px 5px 0px;
+ background-color: white;
+ padding: 3px 10px 3px 10px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color:#970000;
+  color:#fff;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #970000;
 }
 
 .lang {
-    display: flex;
-    justify-content: center;
-    margin: 0px;
-    
-  }
-  
-  .itemLang {
-    font-weight: bold;
-    font-family: 'helvetica';
-    font-weight: bolder;
-    font-size: 17px;
-    color: #ffffff;
-    background-color:#591212;
-    width: 200px;
-    height: 25px;
-    margin: 10px;
-    border-radius: 10px;
-    border: none;
-  }
-  
-  .itemLang:hover {
-    background-color: #8f393e;
-  }
-  
-  .itemLang:active {
-    background-color:#ffffff;
-    color:#000000
-  }
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  margin: 0px;
+  padding: 10px 0px 10px 0px;
+}
+
+.itemLang {
+  font-weight: bold;
+  font-family: 'helvetica';
+  font-weight: bolder;
+  font-size: 12pt;
+  color: #ffffff;
+  background-color:black;
+  padding: 3px 30px 3px 30px;
+  margin: 0px 10px 0px 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.itemLang:hover {
+  background-color: white;
+  color:black;
+}
+
+.itemLang:active {
+  background-color: white;
+  color:black;
+}
+
 
   
-.commissionsFaq {
+.Preguntas {
     max-width: 100%;
     margin: 0px;
     background-color: #000000;
     padding: 10px 50px 10px 50px;
 }
 
-h1 {
+.Preguntas h1 {
   font-family: 'Comfortaa';
     text-align: center;
     color: #ff0000;
@@ -90,17 +236,6 @@ h1 {
     margin-top: 5px;
     color: #ffffff;
     padding-left: 18px;
-}
-
-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #970000;
-  color: #fff;
-  text-align: center;
-  padding-bottom: 10px;
-  width: 100%;
 }
 
 .logo {
