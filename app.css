@@ -49,7 +49,7 @@ header {
 
 nav {
   width: 100%;
-  padding: 0px 0px 3px 0px;;
+  padding: 0px 0px 3px 0px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -448,7 +448,7 @@ footer p{
   max-width: 190px;
   display: flex;
   flex-direction: column;
-  left: 13%;
+  left: 19%;
   z-index: 1;
 }
 
@@ -612,13 +612,16 @@ footer p{
     max-width: 70px;
     max-height: auto;
     }
+    
 nav a{
+  padding: 0px 20px 0px 20px;
+  max-width: 350px;
   font-size: 10pt;
   margin: 3px;
 }
 .lang button{
 font-size: 10pt;
-padding: 2px 15px 2px 15px;
+padding: 2px 30px 2px 30px;
 }
 
 .intro{
@@ -685,16 +688,18 @@ font-size: 17pt;
 margin: 12px;
   }
   .letras p{
-margin: 0px;
+margin: 10px 5px 10px 0px;
   }
   main {
       width: 100%;
-      padding: 0px;
+      padding: 0px 0px 20px 0px;
       margin: 0px;
+      
     }
  
   .comisiones h1{
-  font-size: 20pt;
+    margin: 50px;
+  
   }
   
   .mywebcomics{
@@ -716,6 +721,7 @@ margin: 0px;
  min-width: 140px;
  max-width: 150px;
  max-height: 200px;
+ margin: 0px 5px 0px 10px;
 }
   .boxcomic,
   .boxcomisiones,
@@ -728,6 +734,10 @@ margin: 0px;
 .box img {
   width: 100%;
   height: 105%;
+}
+.box,
+.combox{
+  padding: 15px 2px 15px 2px;
 }
 .letras p{
   margin: 5px 0px 5px 0px;
