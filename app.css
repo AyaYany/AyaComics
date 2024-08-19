@@ -549,22 +549,22 @@ footer p{
 
 /* Individual slide images */
 .slide0 {
-    background: url('fondo/1.png') no-repeat center center/cover;
+    background: url('fondo/1.jpeg') no-repeat center center/cover;
     animation-name: slide0;
 }
 
 .slide1 {
-    background: url('fondo/2.png') no-repeat center center/cover;
+    background: url('fondo/2.jpg') no-repeat center center/cover;
     animation-name: slide1;
 }
 
 .slide2 {
-    background: url('fondo/3.png') no-repeat center center/cover;
+    background: url('fondo/3.jpg') no-repeat center center/cover;
     animation-name: slide2;
 }
 
 .slide3 {
-    background: url('fondo/4.png') no-repeat center center/cover;
+    background: url('fondo/4.jpg') no-repeat center center/cover;
     animation-name: slide3;
 }
 
@@ -655,7 +655,7 @@ padding: 2px 30px 2px 30px;
 }
 
 #background{
-  top: 30px;
+  top: 10%;
   max-width: 100%;
   width: 100%;
   overflow: hidden;
