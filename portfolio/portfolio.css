@@ -11,7 +11,6 @@ body {
   background-color:#000000;
   margin: 0;
 } 
-
 .cabeza {
   display: flex;
   flex-direction: row;
@@ -49,7 +48,7 @@ header {
 }
 
 .logo img {
-  max-width: 100px;
+  max-width: 70px;
   height: auto;
 }
 
@@ -70,7 +69,7 @@ nav a {
   border: none;
   background-color: #000000;
   border-radius: 50px;
-  font-size: 12pt;
+  font-size: 10pt;
   text-decoration: none;
   padding: 0px 20px 0px 20px; 
   margin: 5px 5px 5px 5px;
@@ -81,8 +80,9 @@ nav a {
 }
 
 nav img {
-  max-width: 24px;
-  height: auto;
+  max-width: 20px;
+  height: 20px;
+  margin: 2px 5px 2px 0px;
 }
 
 .homegallery a {
@@ -93,16 +93,18 @@ nav img {
   border: none;
   background-color: #ffffff;
   border-radius: 50px;
-  font-size: 12pt;
-  padding: 2px 20px 2px 20px; 
+  font-size: 10pt;
+  padding: 2px 10px 2px 10px; 
   margin: 5px 0px 5px 0px;
   cursor: pointer;
   font-family: roboto;
   font-weight: 500;
   text-decoration: none;
 }
-
-
+.homegallery img{
+  width: 20px;
+  height: 20px;
+}
 .homegallery a:hover {
   -webkit-animation: blink-2 0.9s both;
           animation: blink-2 0.9s both;
@@ -421,11 +423,12 @@ h2 {
 /* Navbar links */
 .navbar a {
   color: rgb(0, 0, 0);
-  padding: 10px 20px 10px 20px;
+  padding: 5px 10px 5px 10px;
   text-decoration: none;
   display: block;
   margin: 2px;
   z-index: 2;
+  font-size: 11pt;
 }
 
 /* Navbar link hover effect */
