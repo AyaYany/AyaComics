@@ -195,7 +195,7 @@ nav img {
   justify-content: center;
   overflow-x: hidden;
   margin: 0px;
-  height: 501px;
+  height: 511px;
   width: 650px;
   padding: 0px;
 }
@@ -209,7 +209,7 @@ nav img {
   position: absolute;
   left: 0%;
   width: 350px;
-  top: 40%;
+  top: 42%;
   background-color: #fff;
   border-radius: 20px;
   border-style: double;
@@ -259,7 +259,7 @@ nav img {
   width: 350px;
   height: auto;
   right: 0%;
-  top: 16%;
+  top: 17.5%;
   z-index: 2;
 }
 /*
