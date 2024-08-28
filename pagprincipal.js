@@ -5,7 +5,7 @@ document.querySelectorAll('.itemLang').forEach(button => {
 
     // Intro section
     let introText = {
-      en: "Hello everyone!<br><br>Welcome to my website, I'm Aya Yany, manga artist for 14 years and counting.<br><br>You have a lot to explore here! have fun!",
+      en: "Hello everyone!<br><br>Welcome to my website, I'm Aya Yany,<br>manga artist for 14 years and counting.<br><br>You have a lot to explore here! have fun!",
       es: "¡Hola a todos!<br><br>Bienvenidos a mi sitio web, soy Aya Yany, dibujante desde hace 14 años y contando.<br><br>¡Tienes mucho que explorar! ¡Diviértete!"
     };
     document.querySelector('.introcontainer p').innerHTML = introText[lang];
