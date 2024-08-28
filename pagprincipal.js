@@ -5,7 +5,7 @@ document.querySelectorAll('.itemLang').forEach(button => {
 
     // Intro section
     let introText = {
-      en: "Hello everyone!<br><br>Welcome to my website, I'm Aya Yany,<br>manga artist for 14 years and counting.<br><br>You have a lot to explore here! have fun!",
+      en: "Hello everyone!<br><br>Welcome to my website, I'm Aya Yany, manga artist for 14 years and counting.<br><br>You have a lot to explore here! have fun!",
       es: "¡Hola a todos!<br><br>Bienvenidos a mi sitio web, soy Aya Yany, dibujante desde hace 14 años y contando.<br><br>¡Tienes mucho que explorar! ¡Diviértete!"
     };
     document.querySelector('.introcontainer p').innerHTML = introText[lang];
@@ -24,14 +24,13 @@ document.querySelectorAll('.itemLang').forEach(button => {
         "A couple of broken hearts will find themselves in a very unusual situation.<br>Comedy/Romance/Ecchi<br><br><b>STATUS:</b>ongoing<br><br><b>TRANSLATION TO ENGLISH SOON</b>",
         "It is not advisable to fall in love in a battle royale.<br><br>Action/RPG/romance/comedy/SFW<br><br><b>STATUS:</b>It will start as soon as Makotadas finishes.",
         "A teacher with no desire to live runs into a student who is difficult to control.<br><br>Hentai/Yuri<br><br><b>STATUS:</b> Need Funds u_u",
-        "Yuri Vampire harem<br><br>Yuri<br><br><b>STATUS:</b>pre-production<br><br>Need Funds",
-        "Random hentai shorts, in between:<br> male x female, yuri, futanari x female and age gap<br><br><b>STATUS:</b> Ongoing<br><br><b>FREE</b> on X/TWITTER, early access/texteless versions and extra <b>EXCLUSIVE</b> pages on"
+        "Yuri Vampire harem<br><br>Yuri<br><br><b>STATUS:</b>STATUS:</b> very EARLY<br>pre-production<br><br>Need even more Funds T_T"
       ],
       es: [
         "Un par de corazones rotos se encontrarán en una situación muy inusual.<br>Comedia/Romance/Ecchi<br><br><b>ESTADO:</b> en curso<br><br><b>TRADUCCIÓN AL INGLÉS PRONTO</b>",
         "No es recomendable enamorarse en un battle royale.<br><br>Acción/RPG/romance/comedia/SFW<br><br><b>ESTADO:</b> Comenzará tan pronto como Makotadas termine.",
         "Una maestra sin ganas de vivir se encuentra con un estudiante difícil de controlar.<br><br>Hentai/Yuri<br><br><b>ESTADO:</b> Necesito fondos u_u",
-        "Harem de vampiras-Yuri<br><br>Yuri<br><br><b>ESTADO:</b> preproducción<br><br>Necesito fondos",
+        "Harem de vampiras-Yuri<br><br>Yuri<br><br><b>ESTADO:</b> pre-producción<br><br>Necesita aún más fondos T_T",
         
       ]
     };
