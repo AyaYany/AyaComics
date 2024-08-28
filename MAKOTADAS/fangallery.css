@@ -197,6 +197,64 @@ nav button {
   padding: 0px;
 }
 
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #542f78;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 10px;
+}
+/*header h1 {
+  margin: 10px;
+  background-color: #000000;
+}*/
+
+.logo {
+  margin: 10px 0px 10px 0px;
+}
+
+.logo img {
+  max-width: 300px;
+  height: auto;
+}
+
+
+nav {
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0px 5px 0px 5px;
+  justify-content: center;
+}
+
+nav a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #fff;
+  border: none;
+  background-color: #000000;
+  border-radius: 50px;
+  font-size: 12pt;
+  text-decoration: none;
+  padding: 0px 20px 0px 20px; 
+  margin: 5px 5px 5px 5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  cursor: pointer;
+}
+
+nav img {
+  max-width: 24px;
+  height: auto;
+}
+
+
+
 footer {
   font-family: Helvetica, sans-serif;
   display: flex;
