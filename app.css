@@ -195,7 +195,7 @@ nav img {
   justify-content: center;
   overflow-x: hidden;
   margin: 0px;
-  height: 511px;
+  height: 507.5px;
   width: 650px;
   padding: 0px;
 }
@@ -224,6 +224,7 @@ nav img {
   text-align:justify;
   text-align: center;
 }
+
 
 .ComicBot {
   display: flex;
@@ -259,22 +260,10 @@ nav img {
   width: 350px;
   height: auto;
   right: 0%;
-  top: 17.5%;
+  top: 17%;
   z-index: 2;
 }
-/*
-.fonditointro {
-  flex-shrink: 0;
-  width: 560px;
-  height: 230px;
-  background-color:#dfd1d1;
-  border-width: 10px;
-  border-style: double;
-  border-radius: 40px;
-  z-index: 1;
-  position: relative;
-  top: 50px;
-}*/
+
 main {
   display: flex;
   flex-direction: column;
@@ -293,20 +282,20 @@ main h1{
   font-size: 15pt;
   margin: 0px;
 }
+.letras {
+  padding: 6px 11px 6px 0px;
+}
 .text,
 .letras p{
-  font-size: 12pt;
+  font-size: 11pt;
   font-family: roboto;
 }
 .letras h2{
-font-size: 20pt;
+font-size: 17pt;
 font-family: roboto;
 }
 .letras a{
-  background-color: #000000;
-  color: #fff;
-  padding: 3px 8px 3px 8px;
-  border-radius: 20px;
+  color: black;
   text-decoration: none;
 }
 .mywebcomics h1{
@@ -328,37 +317,36 @@ font-family: roboto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-  padding:10px 30px 10px 30px;
+  align-items: center;
   background-color: #56070C;
+  justify-content: center;
 }
 
 .combox,
 .box {
-  width: 400px;
-  height: 280px;
+  max-width: 385px;
+  height: 260px;
   display:flex;
   flex-direction: row;
   align-items: center;
-  background-color: #dfd1d1;
-  border-radius: 50px;
-  border-width: 10px;
-  border-style: double;
-  padding: 10px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 0px;
   margin:10px;
+  overflow: hidden;
 }
 .boxminis {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color:#ff0000;
+  background-color: red;
   width: 650px;
-  border-radius: 50px;
-  border-width: 10px;
-  border-style: double;
-  padding: 15px;
+  height: 280px;
+  padding: 0px;
   margin: 10px;
   justify-content: center;
+  border-radius: 20px;
+  overflow: hidden;
 }
 .minisection {
   display: flex;
@@ -374,17 +362,15 @@ font-family: roboto;
 
 .containercover{
   max-width: 200px;
-  max-height: 260px;
   overflow: hidden;
-  box-shadow: -7px 7px 0px rgb(0, 0, 0);
-  margin: 0px 20px 0px 9px;
-  border-radius: 20px;
+  margin: 0px 10px 0px 0px;
+
 }
 .boxminis img,
 .combox img,
 .box img{
   width: 100%;
-  height: 100%;
+  height: 120%;
   object-fit: cover;
 }
 
@@ -646,8 +632,12 @@ padding: 2px 30px 2px 30px;
   max-width: 100%;
   height:450px;
 }
+.ComicBot a{
+  padding: 0px;
+}
 .intro p{
-  font-size: 10pt;
+  font-size: 11pt;
+  margin: 2px;
 }
 
 .introcontainer a{
@@ -665,62 +655,62 @@ padding: 2px 30px 2px 30px;
 .introcontainer{
   padding: 5px;
   width: 210px;
-  top: 45%;
+  height: auto;
+  top: 38%;
   left: 3%;
 }
-.introcontainer p{
-  margin: 2px 0px 5px 0px;
+.introcontainer p{ 
+  padding: 10px;
 }
 
 #background{
-  top: 8%;
+  top: 3%;
   max-width: 100%;
   width: 100%;
   overflow: hidden;
-  
 }
-
-.boxcomic{
-  max-width: 100%;
-  overflow: hidden;
-}
-
-.boxminis h2,
-.combox h2,
-.box h2 {
-font-size: 17pt;
-}
-
-  .combox,
-  .box {
-    width: 350px;
-    height: 230px;
-    margin: 2px;
-    padding: 3px;
-    border-radius: 30px;
-  }
-  .boxminis{
-    width: 350px;
-    height: auto;
-  }
-  .letras{
-margin: 12px;
-  }
-  .letras p{
-margin: 10px 5px 10px 0px;
-  }
   main {
       width: 100%;
       padding: 0px 0px 20px 0px;
       margin: 0px;
-      
     }
  
   .comisiones h1{
     margin: 50px;
-  
+  }
+  .boxminis{
+    max-width: 385px;
+    margin-top: 10px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 375px;
   }
   
+  .boxminis .letras{
+    margin: 10px;
+    text-align: center;
+  }
+.boxminis .containercover {
+  margin-top: 10px;
+}
+  .box{
+    height: 290px;
+  }
+  .containercover{
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+  }
+  .containercover img{
+    width: 110%;
+    height: 110%;
+    display: block;
+  }
+.minisection {
+  max-width: 385px;
+}
   .mywebcomics{
     max-width: 100%;
     padding: 30px;
@@ -733,44 +723,15 @@ margin: 10px 5px 10px 0px;
   }
   .titlecommi h1 {
     margin: 0px;
-    padding: 0px;
-    font-size: 40pt;
+    padding: 40px 0px 10px 0px;
+    font-size: 30pt;
   }
-.containercover{
- min-width: 140px;
- max-width: 150px;
- max-height: 200px;
- margin: 0px 5px 0px 10px;
-}
-  .boxcomic,
-  .boxcomisiones,
-  .boxminis {
-    max-width: 100%;
-    padding: 0px;
-  }
-  .boxminis img,
-.combox img,
-.box img {
-  width: 100%;
-  height: 105%;
-}
-.box,
-.combox{
-  padding: 15px 2px 15px 2px;
-}
-.letras p{
-  margin: 5px 0px 5px 0px;
-}
 
-  
   .titlecommi{
   margin: 0px;
   max-width: 100%;
   }
-  .titlecommi h1{
-    padding: 20px;
-    font-size: 30pt;
-  }
+ 
 
 }
 /*
