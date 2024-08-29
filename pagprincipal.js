@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
   function changeLanguage(lang) {
     // Intro section
     let introText = {
-      en: "Hello everyone!<br><br>Welcome to my website, I'm Aya Yany,<br>manga artist for 14 years and counting.<br><br>You have a lot to explore here! have fun!",
-      es: "¡Hola a todos!<br><br>Bienvenidos a mi sitio web, soy Aya Yany, dibujante desde hace 14 años y contando.<br><br>¡Tienes mucho que explorar! ¡Diviértete!"
+      en: "Hello everyone!<br><br>Welcome to my website, I'm Aya Yany, manga artist for 14 years and counting.<br><br>You have a lot to explore here! have fun!",
+      es: "¡Hola a todos!<br><br>Bienvenidos a mi web, soy Aya Yany, dibujante desde hace 14 años y contando.<br><br>¡Tienes mucho que explorar! ¡Diviértete!"
     };
     document.querySelector('.introcontainer p').innerHTML = introText[lang];
 
@@ -137,11 +137,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Add click and touch event listeners to nav links for scrolling
-  navLinks.forEach(link => {
-    link.addEventListener('click', scrollToSection);
-    link.addEventListener('touchstart', scrollToSection);
-  });
 
   // Handle dropdown toggle
   document.querySelector('.dropbtn').addEventListener('click', handleDropdown);
@@ -154,4 +149,16 @@ document.addEventListener("DOMContentLoaded", function () {
   // Handle navbar position on window resize
   window.addEventListener('resize', handleNavbarPosition);
   handleNavbarPosition(); // Initial check on load
+  
+});
+
+// Scroll to sections
+document.querySelectorAll('.ComicBot a').forEach(button => {
+  button.addEventListener('click', function () {
+    if (this.textContent.includes("MY OWN WEBCOMICS")) {
+      document.querySelector('.mywebcomics').scrollIntoView({ behavior: 'smooth' });
+    } else if (this.textContent.includes("COMMISSIONED WEBCOMICS")) {
+      document.querySelector('.titlecommi').scrollIntoView({ behavior: 'smooth' });
+    }
+  });
 });
