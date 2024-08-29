@@ -151,3 +151,23 @@ document.addEventListener("DOMContentLoaded", function () {
   handleNavbarPosition(); // Initial check on load
   
 });
+document.addEventListener("DOMContentLoaded", function () {
+  // Función para hacer scroll suave a una sección específica
+  function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
+  // Asignar eventos a los enlaces
+  document.getElementById("myOwnWebcomics").addEventListener("click", function (event) {
+    event.preventDefault();
+    scrollToSection("mywebcomics");
+  });
+
+  document.getElementById("commissionedWebcomics").addEventListener("click", function (event) {
+    event.preventDefault();
+    scrollToSection("boxcomisiones");
+  });
+});
