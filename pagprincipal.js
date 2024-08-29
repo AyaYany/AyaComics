@@ -151,27 +151,42 @@ langButtons.forEach(button => {
     changeLanguage(lang);
   });
   
+document.addEventListener('click', function(event) {
+  var dropdown = document.querySelector('.dropdown-content');
+  var dropbtn = document.querySelector('.dropbtn');
+  
+  if (!dropbtn.contains(event.target) && !dropdown.contains(event.target)) {
+    dropdown.style.display = 'none';
+  }
+});
 
-  document.addEventListener('click', function(event) {
-    var dropdown = document.querySelector('.dropdown-content');
-    var dropbtn = document.querySelector('.dropbtn');
-    
-    // Verifica si el clic ocurrió fuera del dropdown
-    if (!dropbtn.contains(event.target) && !dropdown.contains(event.target)) {
-      dropdown.style.display = 'none';
-    }
-  });
+document.addEventListener('touchstart', function(event) {
+  var dropdown = document.querySelector('.dropdown-content');
+  var dropbtn = document.querySelector('.dropbtn');
   
-  document.querySelector('.dropbtn').addEventListener('click', function(event) {
-    var dropdown = document.querySelector('.dropdown-content');
-    
-    // Cambia la visibilidad del dropdown al hacer clic en el botón
-    if (dropdown.style.display === 'block') {
-      dropdown.style.display = 'none';
-    } else {
-      dropdown.style.display = 'block';
-    }
-  });
+  if (!dropbtn.contains(event.target) && !dropdown.contains(event.target)) {
+    dropdown.style.display = 'none';
+  }
+});
+
+document.querySelector('.dropbtn').addEventListener('click', function(event) {
+  var dropdown = document.querySelector('.dropdown-content');
   
+  if (dropdown.style.display === 'block') {
+    dropdown.style.display = 'none';
+  } else {
+    dropdown.style.display = 'block';
+  }
+});
+
+document.querySelector('.dropbtn').addEventListener('touchstart', function(event) {
+  var dropdown = document.querySelector('.dropdown-content');
+  
+  if (dropdown.style.display === 'block') {
+    dropdown.style.display = 'none';
+  } else {
+    dropdown.style.display = 'block';
+  }
+
 });
 
