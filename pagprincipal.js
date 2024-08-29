@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll('.boxcomisiones .letras p').forEach((desc, index) => {
       desc.innerHTML = commissionedDescriptions[lang][index];
     });
-  
+  }
 
   // Handle navbar positioning on resize
   function handleNavbarPosition() {
@@ -140,27 +140,12 @@ document.addEventListener("DOMContentLoaded", function () {
   
 });
 
-
-// Scroll to sections
-document.querySelectorAll('.ComicBot a').forEach(button => {
-  button.addEventListener('click', function () {
-    if (this.textContent.includes("MY OWN WEBCOMICS")) {
-      document.querySelector('.mywebcomics').scrollIntoView({ behavior: 'smooth' });
-    } else if (this.textContent.includes("COMMISSIONED WEBCOMICS")) {
-      document.querySelector('.titlecommi').scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-});
-
-
-  // Function to handle scrolling to sections
-  function scrollToSection(event) {
-    event.preventDefault();
-    const targetId = event.target.getAttribute("href").substring(1);
-    const targetSection = document.getElementById(targetId);
-    
-    window.scrollTo({
-      top: targetSection.offsetTop - navbar.offsetHeight,
-      behavior: "smooth"
+  document.querySelectorAll('.ComicBot a').forEach((anchor, index) => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      let targetClass = index === 0 ? 'mywebcomics' : 'comisiones';
+      document.querySelector('.' + targetClass).scrollIntoView({
+        behavior: 'smooth'
+      });
     });
-  }
+  });
