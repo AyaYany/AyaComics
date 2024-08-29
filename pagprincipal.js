@@ -151,14 +151,23 @@ document.addEventListener("DOMContentLoaded", function () {
   handleNavbarPosition(); // Initial check on load
   
 });
-
-// Scroll to sections
-document.querySelectorAll('.ComicBot a').forEach(button => {
-  button.addEventListener('click', function () {
-    if (this.textContent.includes("MY OWN WEBCOMICS")) {
-      document.querySelector('.mywebcomics').scrollIntoView({ behavior: 'smooth' });
-    } else if (this.textContent.includes("COMMISSIONED WEBCOMICS")) {
-      document.querySelector('.titlecommi').scrollIntoView({ behavior: 'smooth' });
+document.addEventListener("DOMContentLoaded", function () {
+  // Función para hacer scroll suave a una sección específica
+  function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
     }
+  }
+
+  // Asignar eventos a los enlaces
+  document.getElementById("myOwnWebcomics").addEventListener("click", function (event) {
+    event.preventDefault();
+    scrollToSection("mywebcomics");
+  });
+
+  document.getElementById("commissionedWebcomics").addEventListener("click", function (event) {
+    event.preventDefault();
+    scrollToSection("boxcomisiones");
   });
 });
