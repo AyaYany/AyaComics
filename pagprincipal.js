@@ -82,19 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll('.boxcomisiones .letras p').forEach((desc, index) => {
       desc.innerHTML = commissionedDescriptions[lang][index];
     });
-  }
-
-  // Handle scrolling to sections
-  function scrollToSection(event) {
-    event.preventDefault();
-    const targetId = event.target.getAttribute("href").substring(1);
-    const targetSection = document.getElementById(targetId);
-
-    window.scrollTo({
-      top: targetSection.offsetTop - navbar.offsetHeight,
-      behavior: "smooth"
-    });
-  }
+  
 
   // Handle navbar positioning on resize
   function handleNavbarPosition() {
@@ -151,23 +139,28 @@ document.addEventListener("DOMContentLoaded", function () {
   handleNavbarPosition(); // Initial check on load
   
 });
-document.addEventListener("DOMContentLoaded", function () {
-  // Función para hacer scroll suave a una sección específica
-  function scrollToSection(sectionId) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+
+
+// Scroll to sections
+document.querySelectorAll('.ComicBot a').forEach(button => {
+  button.addEventListener('click', function () {
+    if (this.textContent.includes("MY OWN WEBCOMICS")) {
+      document.querySelector('.mywebcomics').scrollIntoView({ behavior: 'smooth' });
+    } else if (this.textContent.includes("COMMISSIONED WEBCOMICS")) {
+      document.querySelector('.titlecommi').scrollIntoView({ behavior: 'smooth' });
     }
-  }
-
-  // Asignar eventos a los enlaces
-  document.getElementById("myOwnWebcomics").addEventListener("click", function (event) {
-    event.preventDefault();
-    scrollToSection("mywebcomics");
-  });
-
-  document.getElementById("commissionedWebcomics").addEventListener("click", function (event) {
-    event.preventDefault();
-    scrollToSection("boxcomisiones");
   });
 });
+
+
+  // Function to handle scrolling to sections
+  function scrollToSection(event) {
+    event.preventDefault();
+    const targetId = event.target.getAttribute("href").substring(1);
+    const targetSection = document.getElementById(targetId);
+    
+    window.scrollTo({
+      top: targetSection.offsetTop - navbar.offsetHeight,
+      behavior: "smooth"
+    });
+  }
