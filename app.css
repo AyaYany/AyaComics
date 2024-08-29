@@ -236,7 +236,7 @@ nav img {
   padding: 5px 10px 5px 15px;
   border-radius: 20px;
   background-color: #000000;
-  color: #dfd1d1;
+  color: white;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
@@ -669,11 +669,10 @@ padding: 2px 30px 2px 30px;
 }
 
 #background{
-  top: 5%;
+  top: 10%;
   max-width: 100%;
   width: 100%;
   overflow: hidden;
-  position: fixed;
 }
   main {
       width: 100%;
