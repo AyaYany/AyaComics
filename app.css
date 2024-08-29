@@ -374,10 +374,6 @@ font-family: roboto;
   object-fit: cover;
 }
 
-.containercover:hover{
-  transform:scale(1.1);
-}
-
 .boxcomisiones{
   display: flex;
   flex-direction: column;
