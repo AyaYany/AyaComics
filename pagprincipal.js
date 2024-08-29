@@ -151,4 +151,3 @@ document.addEventListener("DOMContentLoaded", function () {
   handleNavbarPosition(); // Initial check on load
   
 });
-document.addEventListener("DOMContentLoaded", function () {
