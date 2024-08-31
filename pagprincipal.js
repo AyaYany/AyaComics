@@ -149,3 +149,25 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Selecciona los enlaces
+    const myWebcomicsLink = document.querySelector('a:contains("MY OWN WEBCOMICS")');
+    const commissionedWebcomicsLink = document.querySelector('a:contains("COMMISSIONED WEBCOMICS")');
+
+    // Selecciona las secciones correspondientes
+    const myWebcomicsSection = document.querySelector('.mywebcomics');
+    const commissionedWebcomicsSection = document.querySelector('.comisiones');
+
+    // Agrega el evento de clic para "MY OWN WEBCOMICS"
+    myWebcomicsLink.addEventListener("click", function(e) {
+        e.preventDefault(); // Evita que el enlace realice la acción predeterminada
+        myWebcomicsSection.scrollIntoView({ behavior: 'smooth' }); // Desplazamiento suave hacia la sección
+    });
+
+    // Agrega el evento de clic para "COMMISSIONED WEBCOMICS"
+    commissionedWebcomicsLink.addEventListener("click", function(e) {
+        e.preventDefault(); // Evita que el enlace realice la acción predeterminada
+        commissionedWebcomicsSection.scrollIntoView({ behavior: 'smooth' }); // Desplazamiento suave hacia la sección
+    });
+});
