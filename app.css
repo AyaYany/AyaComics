@@ -7,7 +7,7 @@ body {
   /*overflow-x: hidden; /* Evita el desplazamiento horizontal */
   box-sizing: border-box;
   padding: 0px;
-  background-color:#970000;
+  background-color:black;
   margin: 0;
 }
 /*56070C*/
@@ -369,6 +369,8 @@ font-family: roboto;
 .boxminis img,
 .combox img,
 .box img{
+  min-width: 50%;
+  min-height: 50%;
   width: 100%;
   height: 120%;
   object-fit: cover;
@@ -532,6 +534,18 @@ footer p{
     z-index: -1;
     overflow: hidden;
 }
+.fondito {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index:-99;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  object-fit: cover;
+  
+}
 
 .slide0,
 .slide1,
@@ -670,9 +684,10 @@ padding: 2px 30px 2px 30px;
 }
 
 #background{
-  top: 15%;
+  top: 20%;
   max-width: 100%;
   width: 100%;
+  height: 100%;
   overflow: hidden;
   position: fixed;
 }
@@ -695,10 +710,14 @@ padding: 2px 30px 2px 30px;
     height: 500px;
     width: 375px;
   }
-  
+  .boxmini{
+    padding: 5px;
+    max-width: 80%;
+  }
   .boxminis .letras{
     margin: 10px;
     text-align: center;
+    min-width: 90%;
   }
 .boxminis .containercover {
   margin-top: 10px;
