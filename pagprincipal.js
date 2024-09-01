@@ -24,14 +24,14 @@ document.addEventListener("DOMContentLoaded", function () {
     let comicDescriptions = {
       en: [
         "A couple of broken hearts will find themselves in a very unusual situation.<br>Comedy/Romance/Ecchi<br><br><b>STATUS:</b>ongoing<br><br><b>TRANSLATION TO ENGLISH SOON</b>",
-        "It is not advisable to fall in love in a battle royale.<br><br>Action/RPG/romance/comedy/SFW<br><br><b>STATUS:</b>It will start as soon as Makotadas finishes.",
+        "It is not advisable to fall in love in a battle royale.<br><br>Action/RPG/romance/<br>comedy/SFW<br><br><b>STATUS:</b>It will start as soon as Makotadas finishes.",
         "A teacher with no desire to live runs into a student who is difficult to control.<br><br>Hentai/Yuri<br><br><b>STATUS:</b> Need Funds u_u",
         "Yuri Vampire harem<br><br>Yuri<br><br><b>STATUS:</b>pre-production<br><br>Need Funds",
         "Random hentai shorts, in between:<br> male x female, yuri, futanari x female and age gap<br><br><b>STATUS:</b> Ongoing<br><br><b>FREE</b> on X/TWITTER, early access/texteless versions and extra <b>EXCLUSIVE</b> pages on"
       ],
       es: [
         "Un par de corazones rotos se encontrarán en una situación muy inusual.<br>Comedia/Romance/Ecchi<br><br><b>ESTADO:</b> en curso<br><br><b>TRADUCCIÓN AL INGLÉS PRONTO</b>",
-        "No es recomendable enamorarse en un battle royale.<br><br>Acción/RPG/romance/comedia/SFW<br><br><b>ESTADO:</b> Comenzará tan pronto como Makotadas termine.",
+        "No es recomendable enamorarse en un battle royale.<br><br>Acción/RPG/romance/<br>comedia/SFW<br><br><b>ESTADO:</b> Comenzará tan pronto como Makotadas termine.",
         "Una maestra sin ganas de vivir se encuentra con un estudiante difícil de controlar.<br><br>Hentai/Yuri<br><br><b>ESTADO:</b> Necesito fondos u_u",
         "Harem de vampiras-Yuri<br><br>Yuri<br><br><b>ESTADO:</b> preproducción<br><br>Necesito fondos",
       ]
@@ -124,6 +124,18 @@ document.addEventListener("DOMContentLoaded", function () {
       changeLanguage(lang);
     });
   });
+// Scroll to sections
+document.querySelectorAll('.ComicBot a').forEach(button => {
+  button.addEventListener('click', function (e) {
+    e.preventDefault(); // Prevent the default link behavior
+
+    if (this.textContent.includes("MY OWN WEBCOMICS")) {
+      document.querySelector('.mywebcomics').scrollIntoView({ behavior: 'smooth' });
+    } else if (this.textContent.includes("COMMISSIONED WEBCOMICS")) {
+      document.querySelector('.titlecommi').scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
 
 
   // Handle dropdown toggle
@@ -140,34 +152,4 @@ document.addEventListener("DOMContentLoaded", function () {
   
 });
 
-  document.querySelectorAll('.ComicBot a').forEach((anchor, index) => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      let targetClass = index === 0 ? 'mywebcomics' : 'comisiones';
-      document.querySelector('.' + targetClass).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
-
-document.addEventListener("DOMContentLoaded", function() {
-    // Selecciona los enlaces
-    const myWebcomicsLink = document.querySelector('a:contains("MY OWN WEBCOMICS")');
-    const commissionedWebcomicsLink = document.querySelector('a:contains("COMMISSIONED WEBCOMICS")');
-
-    // Selecciona las secciones correspondientes
-    const myWebcomicsSection = document.querySelector('.mywebcomics');
-    const commissionedWebcomicsSection = document.querySelector('.comisiones');
-
-    // Agrega el evento de clic para "MY OWN WEBCOMICS"
-    myWebcomicsLink.addEventListener("click", function(e) {
-        e.preventDefault(); // Evita que el enlace realice la acción predeterminada
-        myWebcomicsSection.scrollIntoView({ behavior: 'smooth' }); // Desplazamiento suave hacia la sección
-    });
-
-    // Agrega el evento de clic para "COMMISSIONED WEBCOMICS"
-    commissionedWebcomicsLink.addEventListener("click", function(e) {
-        e.preventDefault(); // Evita que el enlace realice la acción predeterminada
-        commissionedWebcomicsSection.scrollIntoView({ behavior: 'smooth' }); // Desplazamiento suave hacia la sección
-    });
-});
+  
