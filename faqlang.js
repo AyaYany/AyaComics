@@ -77,3 +77,45 @@ langButtons.forEach(button => {
       translateFaq(button.getAttribute('data-lang'));
   });
 });
+ const navbar = document.querySelector(".navbar");
+  const sections = document.querySelectorAll(".section");
+  const navLinks = document.querySelectorAll(".navbar a");
+ navLinks.forEach(link => {
+    link.addEventListener("click", scrollToSection);
+  });
+
+  // Function to handle navbar positioning on resize
+  function handleNavbarPosition() {
+    if (window.innerWidth <= 768) {
+      navbar.style.position = "fixed";
+      navbar.style.bottom = 0;
+      navbar.style.top = "auto";
+    } else {
+      navbar.style.position = "sticky";
+      navbar.style.top = "60px"; // Adjust based on your header height
+      navbar.style.bottom = "auto";
+    }
+  }
+ document.addEventListener('click', function(event) {
+    var dropdown = document.querySelector('.dropdown-content');
+    var dropbtn = document.querySelector('.dropbtn');
+    
+    // Verifica si el clic ocurrió fuera del dropdown
+    if (!dropbtn.contains(event.target) && !dropdown.contains(event.target)) {
+      dropdown.style.display = 'none';
+    }
+  });
+  
+  document.querySelector('.dropbtn').addEventListener('click', function(event) {
+    var dropdown = document.querySelector('.dropdown-content');
+    
+    // Cambia la visibilidad del dropdown al hacer clic en el botón
+    if (dropdown.style.display === 'block') {
+      dropdown.style.display = 'none';
+    } else {
+      dropdown.style.display = 'block';
+    }
+  });
+
+
+
