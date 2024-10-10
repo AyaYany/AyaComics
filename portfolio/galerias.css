@@ -2,7 +2,6 @@ body {
   margin: 0;
   background-color: #000000;
 }
-
 .cabeza {
   display: flex;
   flex-direction: row;
@@ -40,7 +39,7 @@ header {
 }
 
 .logo img {
-  max-width: 100px;
+  max-width: 70px;
   height: auto;
 }
 
@@ -61,7 +60,7 @@ nav a {
   border: none;
   background-color: #000000;
   border-radius: 50px;
-  font-size: 12pt;
+  font-size: 10pt;
   text-decoration: none;
   padding: 0px 20px 0px 20px; 
   margin: 5px 5px 5px 5px;
@@ -72,9 +71,9 @@ nav a {
 }
 
 nav img {
-  max-width: 24px;
-  margin-right: 3px;
-  height: auto;
+  max-width: 20px;
+  height: 20px;
+  margin: 2px 5px 2px 0px;
 }
 
 .homegallery a {
@@ -85,16 +84,18 @@ nav img {
   border: none;
   background-color: #ffffff;
   border-radius: 50px;
-  font-size: 12pt;
-  padding: 2px 20px 2px 20px; 
+  font-size: 10pt;
+  padding: 2px 10px 2px 10px; 
   margin: 5px 0px 5px 0px;
   cursor: pointer;
   font-family: roboto;
   font-weight: 500;
   text-decoration: none;
 }
-
-
+.homegallery img{
+  width: 20px;
+  height: 20px;
+}
 .homegallery a:hover {
   -webkit-animation: blink-2 0.9s both;
           animation: blink-2 0.9s both;
@@ -136,6 +137,77 @@ nav img {
   100% {
     opacity: 1;
   }
+}
+
+.dropbtn a{
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  color: white;
+  padding: 0px 20px 0px 20px;
+  font-size: 12pt;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  font-weight: 500;
+  margin: 0px;
+}
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+ 
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  background: none;
+  min-width: 160px;
+  box-shadow: none;
+  z-index: 3;
+  font-family: roboto;
+  font-weight: 500;
+  background-color: #8e0808;
+  border-radius: 0px 0px 10px 10px;
+  padding: 5px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  /*margin-left: 20px;*/
+  text-decoration: none;
+  display: flex;
+  margin: 0px 0px 5px 0px;
+ 
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color:#8e0808;
+  color:#fff;
+
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #ffc5c5;
 }
 
 
