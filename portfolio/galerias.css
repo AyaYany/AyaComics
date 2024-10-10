@@ -23,14 +23,6 @@ header {
   text-decoration: none;
 }
 
-.cabeza {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items:center;
-  padding: 10px;
-}
-
 .logo {
   height:fit-content;
   margin: 10px 0px 10px 0px;
