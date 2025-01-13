@@ -152,4 +152,32 @@ document.querySelectorAll('.ComicBot a').forEach(button => {
   
 });
 
-  
+document.addEventListener("DOMContentLoaded", function () {
+  const popup = document.getElementById("new-comic-popup");
+  const popupDelayDays = 15; // Días de caducidad para mostrar el popup
+  const popupKey = "popupLastSeen";
+
+  // Función para verificar si se debe mostrar el popup
+  function shouldShowPopup() {
+    const lastSeen = localStorage.getItem(popupKey);
+    if (!lastSeen) return true; // Nunca se ha mostrado el popup antes
+
+    const lastSeenDate = new Date(lastSeen);
+    const now = new Date();
+    const daysDifference = (now - lastSeenDate) / (1000 * 60 * 60 * 24);
+
+    return daysDifference >= popupDelayDays; // Verifica si pasaron 15 días
+  }
+
+  // Mostrar el popup si corresponde
+  if (shouldShowPopup()) {
+    popup.classList.add("show"); // Añade la clase `show` para hacerlo visible
+
+    // Registrar la última vez que se mostró el popup
+    popup.addEventListener("click", function () {
+      popup.classList.remove("show"); // Cierra el popup al hacer clic
+      localStorage.setItem(popupKey, new Date().toISOString()); // Registra el tiempo actual
+    });
+  }
+});
+
