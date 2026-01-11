@@ -128,7 +128,7 @@ padding: 0%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 560px;
+  max-width: 600px;
 }
 
 .VideoBox h3,
@@ -341,3 +341,4 @@ footer p{
 .contact-info a:hover {
   text-decoration: underline;
 }
+
