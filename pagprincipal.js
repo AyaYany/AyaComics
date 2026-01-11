@@ -133,8 +133,9 @@ document.querySelectorAll('.ComicBot a').forEach(button => {
       document.querySelector('.mywebcomics').scrollIntoView({ behavior: 'smooth' });
     } else if (this.textContent.includes("COMMISSIONED WEBCOMICS")) {
       document.querySelector('.titlecommi').scrollIntoView({ behavior: 'smooth' });
-    }
-  });
+    } else if (this.textContent.includes("MY MINI COMICS HHH")) {
+      document.querySelector('.MiniHHH').scrollIntoView({ behavior: 'smooth' });
+  }});
 });
 
 
@@ -181,3 +182,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+const element = document.querySelector('.my-element');
+
+// Add classes to start the animation
+element.classList.add('animate__animated', 'animate__bounceinLeft');
+
+// Listen for the end of the animation to remove the classes
+element.addEventListener('animationend', () => {
+    element.classList.remove('animate__animated', 'animate__bounceinLeft');
+    // Code to execute after the animation finishes
+}, { once: true }); // Use { once: true } to remove the listener automatically

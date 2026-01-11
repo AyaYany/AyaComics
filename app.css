@@ -630,6 +630,7 @@ nav img {
   flex-direction: column;
   width: 300px;
   align-items: center;
+  
 }
 
 .ComicBot a{
@@ -642,8 +643,9 @@ nav img {
   font-weight: 500;
   font-size: 12pt;
   margin: 5px 0px 10px 0px;
-  
+  box-shadow: 5px 5px 0 0 red;
 }
+
 .introcontainer a:hover{
   background-color: #970000;
   color:#000000;
@@ -701,6 +703,7 @@ main h1{
   padding: 2%;
  align-items: left;
 }
+
 .letras .tag {
   display: inline-block; /* Hace que se comporte como un elemento en línea con tamaño */
   background-color: #ebe3e3; /* Fondo claro */
@@ -796,11 +799,11 @@ margin: 0% 0% 10% 0%;
   flex-direction: row;
   background-color: red;
   width: 100%;
-  height: 340px;
+  height: 500px;
   padding: 0px;
-  margin: 2%;
+  margin: 10% 0% 2% 0%;
   justify-content: center;
-  overflow: hidden;
+  overflow:hidden;
   }
 
 .minis .letras p a{
@@ -819,8 +822,8 @@ color: white;
 .minis .letras h2 {
  font-family: roboto;
  font-weight:bold;
- font-size: 25pt;
- margin: 1% 1% 1% 0%;
+ font-size: 40pt;
+ padding: 10% 10% 0% 0%;
 }
 
 .minis .letras p{
@@ -1331,7 +1334,7 @@ nav a{
   position: absolute;
   padding: 0px;
   width: 280px;
-  height: 200px;
+  height: 240px;
   top:20%;
   left: 3%;
 }
@@ -1350,14 +1353,17 @@ nav a{
   position: fixed;
 }
 
-
-
 .containercover{
   display: flex;
  justify-content: left;
+ overflow: hidden;
+}
+.containercover img{
+object-fit: cover;
+height: 100%;
 }
 .minis {
-  height: 470px;
+  height: 700px;
   flex-direction: column;
 align-items: center;
 justify-content: center;
@@ -1372,6 +1378,8 @@ align-items: center;;
 }
 .minis .letras h2{
   text-align: center;
+  padding: 30% 0% 5% 0%;
+  margin: 0%;
 }
 
 .minis .letras p{

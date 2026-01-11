@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Comic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="minipage.css">
+</head>
+
+<body>
+
+<div class="navigation-controls">
+  <a id="prevLink"><button class="previous">PREVIOUS</button></a>
+  <a href="https://ayacomics.net"><button class="home">HOME</button></a>
+  <a id="nextLink"><button class="next">NEXT</button></a>
+</div>
+
+<div class="webcomic-page">
+  <a href="minis"><button class="chapter_menu2">MINI SELECT</button></a>
+</div>
+
+<div class="chapter-image" id="chapterImage"></div>
+
+<div class="webcomic-page">
+  <a href="minis"><button class="chapter_menu2">MINI SELECT</button></a>
+</div>
+
+<div class="navigation-controls">
+  <a id="prevLinkBottom"><button class="previous">PREVIOUS</button></a>
+  <a href="https://ayacomics.net"><button class="home">HOME</button></a>
+  <a id="nextLinkBottom"><button class="next">NEXT</button></a>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+    const comicId = params.get("comic");
+    const container = document.getElementById("chapterImage");
+
+    if (!comicId) {
+        console.error("No se proporcionó un ID de comic.");
+        return;
+    }
+
+    fetch("minis.json")
+        .then(res => {
+            if (!res.ok) throw new Error("No se pudo cargar minis.json");
+            return res.json();
+        })
+        .then(data => {
+            const comics = data.comics;
+            const order = data.order;
+            const comic = comics[comicId];
+
+            if (!comic) {
+                console.error("Comic no encontrado:", comicId);
+                return;
+            }
+
+            const index = order.indexOf(comicId);
+            document.title = comic.title + " | Aya Yany Comics";
+            container.innerHTML = "";
+
+            // --- CARGA DE IMÁGENES ---
+            comic.images.forEach((src, idx) => {
+                const isLast = idx === comic.images.length - 1;
+
+                // Si es la última imagen y el comic tiene un link en el JSON
+                if (isLast && comic.link) {
+                    const link = document.createElement("a");
+                    link.href = comic.link; // <--- Aquí usa el link diferente por comic
+                    link.target = "_blank";
+                    link.rel = "noopener";
+                    
+                    const img = document.createElement("img");
+                    img.src = src;
+                    img.alt = "Support on Patreon";
+                    img.loading = "lazy";
+                    
+                    link.appendChild(img);
+                    container.appendChild(link);
+                } else {
+                    const img = document.createElement("img");
+                    img.src = src;
+                    img.loading = "lazy";
+                    container.appendChild(img);
+                }
+            });
+
+            // --- CONFIGURACIÓN DE NAVEGACIÓN ---
+            const prevId = index > 0 ? order[index - 1] : null;
+            const nextId = index < order.length - 1 ? order[index + 1] : null;
+
+            // Ajusta estas rutas según tus archivos reales
+            const prevURL = prevId ? `comic.html?comic=${prevId}` : "minis.html";
+            const nextURL = nextId ? `comic.html?comic=${nextId}` : "minis.html";
+
+            document.getElementById("prevLink").href = prevURL;
+            document.getElementById("prevLinkBottom").href = prevURL;
+            document.getElementById("nextLink").href = nextURL;
+            document.getElementById("nextLinkBottom").href = nextURL;
+        })
+        .catch(err => console.error("Error cargando el cómic:", err));
+});
+</script>
+
+</body>
+</html>
