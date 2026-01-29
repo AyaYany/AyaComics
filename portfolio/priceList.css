@@ -7,7 +7,14 @@ body {
   align-items: center;
  text-align: center;
  width: 100%;
+ ;
 overflow-x: hidden;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .cabeza {
@@ -128,7 +135,7 @@ padding: 0%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 600px;
+  max-width: 560px;
 }
 
 .VideoBox h3,
@@ -259,25 +266,26 @@ margin: 10px 0px 0px 0px;
   justify-content: center;
 }
 
-
-.cajaclientes{
+.cajaclientes {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 20px 0;
 }
+
 .cajaclientes a {
   color: #fff;
   border: none;
   background-color: #000000;
   border-radius: 10px;
-  font-size: 17pt;
+  font-size: 14pt; /* Ajustado para que no rompa en móvil */
   text-decoration: none;
-  padding: 0.5%; 
-  margin: 1%;
+  padding: 10px 15px; 
+  margin: 5px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  font-style: normal;
+  display: inline-block;
 }
 
 footer {
@@ -286,26 +294,20 @@ footer {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 0% 10% 0% 10%;
+  padding: 30px 20px;
 }
 
-footer h1{
-  justify-content: center;
+footer h1 {
   color: #000000;
   font-size: 20pt;
- margin: 3% 0% 3% 0%;
-  padding: 0px;
-  font-family: helvetica;
+  margin-bottom: 10px;
 }
-footer p{
-  display: flex;
-  justify-content: center;
+
+footer p {
   font-size: 15px;
-  padding: 0%;
-  font-weight: normal;
-  margin: 5%;
+  color: #fff;
+  text-align: center;
 }
 #myBtn {
   display: none; /* Hidden by default */
@@ -341,4 +343,3 @@ footer p{
 .contact-info a:hover {
   text-decoration: underline;
 }
-
